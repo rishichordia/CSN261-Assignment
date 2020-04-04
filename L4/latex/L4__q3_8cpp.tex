@@ -1,0 +1,155 @@
+\hypertarget{L4__q3_8cpp}{}\doxysection{L4\+\_\+q3.\+cpp File Reference}
+\label{L4__q3_8cpp}\index{L4\_q3.cpp@{L4\_q3.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{L4__q3_8cpp_ad30d72a74e8470e22d648a704fb90cc5}{find\+Longest\+Array}} (int \mbox{\hyperlink{L4__q2_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}, int arr\mbox{[}$\,$\mbox{]}, int given\+\_\+sum)
+\begin{DoxyCompactList}\small\item\em Stores the end index of the occurence. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{L4__q3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em The main function is the driver that drives the program by taking required input and also calculates the execution time. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{L4__q3_8cpp_a559a1d26d36ec391d98bca4d3aa9be0e}{start\+\_\+index}}
+\item 
+int \mbox{\hyperlink{L4__q3_8cpp_aad0382603cc7cfdabc66a5676b396ff4}{end\+\_\+index}}
+\begin{DoxyCompactList}\small\item\em Stores the starting index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{L4__q3_8cpp_ad30d72a74e8470e22d648a704fb90cc5}\label{L4__q3_8cpp_ad30d72a74e8470e22d648a704fb90cc5}} 
+\index{L4\_q3.cpp@{L4\_q3.cpp}!findLongestArray@{findLongestArray}}
+\index{findLongestArray@{findLongestArray}!L4\_q3.cpp@{L4\_q3.cpp}}
+\doxysubsubsection{\texorpdfstring{findLongestArray()}{findLongestArray()}}
+{\footnotesize\ttfamily int find\+Longest\+Array (\begin{DoxyParamCaption}\item[{int}]{n,  }\item[{int}]{arr\mbox{[}$\,$\mbox{]},  }\item[{int}]{given\+\_\+sum }\end{DoxyParamCaption})}
+
+
+
+Stores the end index of the occurence. 
+
+A function that finds the longest subarray in with a given sum from the Array 
+\begin{DoxyParams}{Parameters}
+{\em arr} & This is the array on which we have to operate \\
+\hline
+{\em n} & This is the number of elememts given in the array \\
+\hline
+{\em given\+\_\+sum} & This is the sum that we have to find \\
+\hline
+\end{DoxyParams}
+Stores the sum in the hash map
+
+Checks if the sum is the required sum
+
+Finds whether the amount by which the sum is short or more present in the hash table If present updates the hash Table ~\newline
+ 
+
+Definition at line 14 of file L4\+\_\+q3.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{15 \{}
+\DoxyCodeLine{16     unordered\_map<int, int> m; }
+\DoxyCodeLine{17     \textcolor{keywordtype}{int} sum = 0, maxLen = 0; }
+\DoxyCodeLine{18   }
+\DoxyCodeLine{19      \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{L4__q2_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}; i++) \{ }
+\DoxyCodeLine{20   }
+\DoxyCodeLine{21         sum += arr[i];}
+\DoxyCodeLine{23         \textcolor{keywordflow}{if} (m.find(sum) == m.end()) }
+\DoxyCodeLine{24             m[sum] = i;}
+\DoxyCodeLine{26     \textcolor{keywordflow}{if} (sum == given\_sum) \{}
+\DoxyCodeLine{27         maxLen = i + 1;}
+\DoxyCodeLine{28             \mbox{\hyperlink{L4__q3_8cpp_aad0382603cc7cfdabc66a5676b396ff4}{end\_index}}=i;\}}
+\DoxyCodeLine{29         }
+\DoxyCodeLine{32         \textcolor{keywordflow}{if} (m.find(sum -\/ given\_sum) != m.end()) }
+\DoxyCodeLine{33         \{ }
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35             \textcolor{keywordflow}{if} (maxLen < (i -\/ m[sum -\/ given\_sum]))}
+\DoxyCodeLine{36                  \{}
+\DoxyCodeLine{37                  maxLen = i -\/ m[sum -\/ given\_sum];}
+\DoxyCodeLine{38                  \mbox{\hyperlink{L4__q3_8cpp_aad0382603cc7cfdabc66a5676b396ff4}{end\_index}}=i;}
+\DoxyCodeLine{39                  \}          }
+\DoxyCodeLine{40          \} }
+\DoxyCodeLine{41     \}}
+\DoxyCodeLine{42     \mbox{\hyperlink{L4__q3_8cpp_a559a1d26d36ec391d98bca4d3aa9be0e}{start\_index}}=\mbox{\hyperlink{L4__q3_8cpp_aad0382603cc7cfdabc66a5676b396ff4}{end\_index}}-\/maxLen+1;}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} maxLen;}
+\DoxyCodeLine{44 \} }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{L4__q3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{L4__q3_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{L4\_q3.cpp@{L4\_q3.cpp}!main@{main}}
+\index{main@{main}!L4\_q3.cpp@{L4\_q3.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+The main function is the driver that drives the program by taking required input and also calculates the execution time. 
+
+
+
+Definition at line 46 of file L4\+\_\+q3.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48     clock\_t start, end; }
+\DoxyCodeLine{49     start = clock(); }
+\DoxyCodeLine{50 }
+\DoxyCodeLine{51     \mbox{\hyperlink{L4__q3_8cpp_a559a1d26d36ec391d98bca4d3aa9be0e}{start\_index}}=-\/1;\mbox{\hyperlink{L4__q3_8cpp_aad0382603cc7cfdabc66a5676b396ff4}{end\_index}}=-\/1; }
+\DoxyCodeLine{52     \textcolor{keywordtype}{int} \mbox{\hyperlink{L4__q2_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}};}
+\DoxyCodeLine{53     cin>>\mbox{\hyperlink{L4__q2_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}};}
+\DoxyCodeLine{54     \textcolor{keywordtype}{int} arr[\mbox{\hyperlink{L4__q2_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}}] = \{\};}
+\DoxyCodeLine{55     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\mbox{\hyperlink{L4__q2_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}};i++)}
+\DoxyCodeLine{56      cin>>arr[i]; }
+\DoxyCodeLine{57     \textcolor{keywordtype}{int} k;}
+\DoxyCodeLine{58     cin>>k;}
+\DoxyCodeLine{59     \textcolor{keywordtype}{int} maxLen=\mbox{\hyperlink{L4__q3_8cpp_ad30d72a74e8470e22d648a704fb90cc5}{findLongestArray}}(\mbox{\hyperlink{L4__q2_8cpp_a76f11d9a0a47b94f72c2d0e77fb32240}{n}},arr,k);}
+\DoxyCodeLine{60     \textcolor{keywordflow}{if}(maxLen)}
+\DoxyCodeLine{61     \{}
+\DoxyCodeLine{62         cout << \textcolor{stringliteral}{"\(\backslash\)nLength of the longest subarray is "}}
+\DoxyCodeLine{63              <<maxLen<<endl; }
+\DoxyCodeLine{64         cout<<\textcolor{stringliteral}{"Index from "}<<\mbox{\hyperlink{L4__q3_8cpp_a559a1d26d36ec391d98bca4d3aa9be0e}{start\_index}}<<\textcolor{stringliteral}{" to "}<<\mbox{\hyperlink{L4__q3_8cpp_aad0382603cc7cfdabc66a5676b396ff4}{end\_index}}<<endl;}
+\DoxyCodeLine{65     \}}
+\DoxyCodeLine{66     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{67         cout<<\textcolor{stringliteral}{"Sum not Found"}<<endl;}
+\DoxyCodeLine{68         }
+\DoxyCodeLine{69         end = clock();}
+\DoxyCodeLine{70     \textcolor{keywordtype}{double} time\_taken = double(end -\/ start) / double(CLOCKS\_PER\_SEC); }
+\DoxyCodeLine{71     cout << \textcolor{stringliteral}{"\(\backslash\)nTime taken by program is : "} << fixed  }
+\DoxyCodeLine{72         << time\_taken << setprecision(5); }
+\DoxyCodeLine{73     cout << \textcolor{stringliteral}{" sec "} << endl;}
+\DoxyCodeLine{74     \textcolor{keywordflow}{return} 0; }
+\DoxyCodeLine{75 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{L4__q3_8cpp_aad0382603cc7cfdabc66a5676b396ff4}\label{L4__q3_8cpp_aad0382603cc7cfdabc66a5676b396ff4}} 
+\index{L4\_q3.cpp@{L4\_q3.cpp}!end\_index@{end\_index}}
+\index{end\_index@{end\_index}!L4\_q3.cpp@{L4\_q3.cpp}}
+\doxysubsubsection{\texorpdfstring{end\_index}{end\_index}}
+{\footnotesize\ttfamily int end\+\_\+index}
+
+
+
+Stores the starting index. 
+
+
+
+Definition at line 8 of file L4\+\_\+q3.\+cpp.
+
+\mbox{\Hypertarget{L4__q3_8cpp_a559a1d26d36ec391d98bca4d3aa9be0e}\label{L4__q3_8cpp_a559a1d26d36ec391d98bca4d3aa9be0e}} 
+\index{L4\_q3.cpp@{L4\_q3.cpp}!start\_index@{start\_index}}
+\index{start\_index@{start\_index}!L4\_q3.cpp@{L4\_q3.cpp}}
+\doxysubsubsection{\texorpdfstring{start\_index}{start\_index}}
+{\footnotesize\ttfamily int start\+\_\+index}
+
+
+
+Definition at line 7 of file L4\+\_\+q3.\+cpp.
+

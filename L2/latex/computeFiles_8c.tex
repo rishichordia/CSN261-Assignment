@@ -1,0 +1,143 @@
+\hypertarget{computeFiles_8c}{}\doxysection{compute\+Files.\+c File Reference}
+\label{computeFiles_8c}\index{computeFiles.c@{computeFiles.c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+char $\ast$ \mbox{\hyperlink{computeFiles_8c_ae487d4f7831a6bb066cd9fe8b057eec4}{original\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em reads from original input file and stores in stri \end{DoxyCompactList}\item 
+char $\ast$ \mbox{\hyperlink{computeFiles_8c_a79ef3867f3e9e4c28fd04a647c6d1f7f}{decrypted\+\_\+read}} ()
+\begin{DoxyCompactList}\small\item\em reads from decrypted\+Outputfile file and stores in decrypted \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{computeFiles_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+char \mbox{\hyperlink{computeFiles_8c_ae372b999e305792728c6f4e4a5ee995a}{stri}} \mbox{[}$\,$\mbox{]} =\char`\"{}\char`\"{}
+\item 
+char \mbox{\hyperlink{computeFiles_8c_a31bcf912fa6002c48e8be5a1d9918528}{decrypted}} \mbox{[}$\,$\mbox{]} =\char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{computeFiles_8c_a79ef3867f3e9e4c28fd04a647c6d1f7f}\label{computeFiles_8c_a79ef3867f3e9e4c28fd04a647c6d1f7f}} 
+\index{computeFiles.c@{computeFiles.c}!decrypted\_read@{decrypted\_read}}
+\index{decrypted\_read@{decrypted\_read}!computeFiles.c@{computeFiles.c}}
+\doxysubsubsection{\texorpdfstring{decrypted\_read()}{decrypted\_read()}}
+{\footnotesize\ttfamily char$\ast$ decrypted\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reads from decrypted\+Outputfile file and stores in decrypted 
+
+
+
+Definition at line 31 of file compute\+Files.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32 \{}
+\DoxyCodeLine{33         FILE* f =fopen(\textcolor{stringliteral}{"decryptedOutputfile.txt"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{34         }
+\DoxyCodeLine{35     \textcolor{keywordflow}{if}(!f)}
+\DoxyCodeLine{36     printf(\textcolor{stringliteral}{"Cannot open file"});}
+\DoxyCodeLine{37     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{38     \{}
+\DoxyCodeLine{39         \textcolor{keywordtype}{int} x=0;}
+\DoxyCodeLine{40           \textcolor{keywordtype}{char} ch;}
+\DoxyCodeLine{41           \textcolor{keywordflow}{while}((ch=getc(f))!=EOF)}
+\DoxyCodeLine{42           \{}
+\DoxyCodeLine{43           \mbox{\hyperlink{computeFiles_8c_a31bcf912fa6002c48e8be5a1d9918528}{decrypted}}[x]=ch;}
+\DoxyCodeLine{44           x++;}
+\DoxyCodeLine{45           \}}
+\DoxyCodeLine{46           \mbox{\hyperlink{computeFiles_8c_a31bcf912fa6002c48e8be5a1d9918528}{decrypted}}[x]=\textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{47                 fclose(f);}
+\DoxyCodeLine{48     \}}
+\DoxyCodeLine{49       \textcolor{keywordflow}{return} \mbox{\hyperlink{computeFiles_8c_a31bcf912fa6002c48e8be5a1d9918528}{decrypted}};}
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{computeFiles_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{computeFiles_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{computeFiles.c@{computeFiles.c}!main@{main}}
+\index{main@{main}!computeFiles.c@{computeFiles.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 52 of file compute\+Files.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{53 \{}
+\DoxyCodeLine{54         \textcolor{keywordtype}{char} *s1=\mbox{\hyperlink{computeFiles_8c_ae487d4f7831a6bb066cd9fe8b057eec4}{original\_read}}();}
+\DoxyCodeLine{55         printf(\textcolor{stringliteral}{"\%s \(\backslash\)n"},\mbox{\hyperlink{computeFiles_8c_ae372b999e305792728c6f4e4a5ee995a}{stri}});}
+\DoxyCodeLine{56         \textcolor{keywordtype}{char} *s2=\mbox{\hyperlink{computeFiles_8c_a79ef3867f3e9e4c28fd04a647c6d1f7f}{decrypted\_read}}();}
+\DoxyCodeLine{57     printf(\textcolor{stringliteral}{"\%s"},\mbox{\hyperlink{computeFiles_8c_a31bcf912fa6002c48e8be5a1d9918528}{decrypted}});}
+\DoxyCodeLine{58     }
+\DoxyCodeLine{59 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{computeFiles_8c_ae487d4f7831a6bb066cd9fe8b057eec4}\label{computeFiles_8c_ae487d4f7831a6bb066cd9fe8b057eec4}} 
+\index{computeFiles.c@{computeFiles.c}!original\_read@{original\_read}}
+\index{original\_read@{original\_read}!computeFiles.c@{computeFiles.c}}
+\doxysubsubsection{\texorpdfstring{original\_read()}{original\_read()}}
+{\footnotesize\ttfamily char$\ast$ original\+\_\+read (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+reads from original input file and stores in stri 
+
+
+
+Definition at line 8 of file compute\+Files.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{9 \{}
+\DoxyCodeLine{10         FILE* f =fopen(\textcolor{stringliteral}{"Sample\_testcase\_1.txt"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{11         }
+\DoxyCodeLine{12     \textcolor{keywordflow}{if}(!f)}
+\DoxyCodeLine{13     \{printf(\textcolor{stringliteral}{"Cannot open file"});}
+\DoxyCodeLine{14     \}}
+\DoxyCodeLine{15     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{16     \{}
+\DoxyCodeLine{17         \textcolor{keywordtype}{int} x=0;}
+\DoxyCodeLine{18           \textcolor{keywordtype}{char} ch;}
+\DoxyCodeLine{19           \textcolor{keywordflow}{while}((ch=getc(f))!=EOF)}
+\DoxyCodeLine{20           \{}
+\DoxyCodeLine{21           \mbox{\hyperlink{computeFiles_8c_ae372b999e305792728c6f4e4a5ee995a}{stri}}[x]=ch;}
+\DoxyCodeLine{22           x++;}
+\DoxyCodeLine{23           \}}
+\DoxyCodeLine{24                 \mbox{\hyperlink{computeFiles_8c_ae372b999e305792728c6f4e4a5ee995a}{stri}}[x]=\textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{25                 fclose(f);}
+\DoxyCodeLine{26     \}}
+\DoxyCodeLine{27     \textcolor{keywordflow}{return} \mbox{\hyperlink{computeFiles_8c_ae372b999e305792728c6f4e4a5ee995a}{stri}};}
+\DoxyCodeLine{28 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{computeFiles_8c_a31bcf912fa6002c48e8be5a1d9918528}\label{computeFiles_8c_a31bcf912fa6002c48e8be5a1d9918528}} 
+\index{computeFiles.c@{computeFiles.c}!decrypted@{decrypted}}
+\index{decrypted@{decrypted}!computeFiles.c@{computeFiles.c}}
+\doxysubsubsection{\texorpdfstring{decrypted}{decrypted}}
+{\footnotesize\ttfamily char decrypted\mbox{[}$\,$\mbox{]} =\char`\"{}\char`\"{}}
+
+
+
+Definition at line 5 of file compute\+Files.\+c.
+
+\mbox{\Hypertarget{computeFiles_8c_ae372b999e305792728c6f4e4a5ee995a}\label{computeFiles_8c_ae372b999e305792728c6f4e4a5ee995a}} 
+\index{computeFiles.c@{computeFiles.c}!stri@{stri}}
+\index{stri@{stri}!computeFiles.c@{computeFiles.c}}
+\doxysubsubsection{\texorpdfstring{stri}{stri}}
+{\footnotesize\ttfamily char stri\mbox{[}$\,$\mbox{]} =\char`\"{}\char`\"{}}
+
+
+
+Definition at line 4 of file compute\+Files.\+c.
+

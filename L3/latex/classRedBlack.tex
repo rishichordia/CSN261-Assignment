@@ -1,0 +1,311 @@
+\hypertarget{classRedBlack}{}\doxysection{Red\+Black Class Reference}
+\label{classRedBlack}\index{RedBlack@{RedBlack}}
+
+
+Defines the operations on Binary search Tree.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classRedBlack_a9cca760538c6937f9223908f15f87f75}{Red\+Black}} ()
+\item 
+void \mbox{\hyperlink{classRedBlack_a9532449abc55416a106fe5f16a1bace1}{insert\+RB}} (int d)
+\item 
+void \mbox{\hyperlink{classRedBlack_ad6c8cade6cdf96655d5c9635616e93de}{manage\+Position}} (\mbox{\hyperlink{classnode}{node}} $\ast$\&ptr, \mbox{\hyperlink{classnode}{node}} $\ast$\&root)
+\item 
+void \mbox{\hyperlink{classRedBlack_a21c3a1678c6832d6d08a8dab217d4e86}{rotate\+Right}} (\mbox{\hyperlink{classnode}{node}} $\ast$\&root, \mbox{\hyperlink{classnode}{node}} $\ast$\&ptr)
+\item 
+void \mbox{\hyperlink{classRedBlack_a41101a0e1cea9467e4a81280f9717f32}{rotate\+Left}} (\mbox{\hyperlink{classnode}{node}} $\ast$\&root, \mbox{\hyperlink{classnode}{node}} $\ast$\&ptr)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classRedBlack_a2d365f6858769e89fa5aeed35b3f3a02}{size}}
+\item 
+\mbox{\hyperlink{classnode}{node}} $\ast$ \mbox{\hyperlink{classRedBlack_abd7fec7f461cb8f465e0eaf52a374022}{root\+RB}}
+\begin{DoxyCompactList}\small\item\em number of nodes of the tree \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the operations on Binary search Tree. 
+
+Definition at line 42 of file Q1.\+cpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classRedBlack_a9cca760538c6937f9223908f15f87f75}\label{classRedBlack_a9cca760538c6937f9223908f15f87f75}} 
+\index{RedBlack@{RedBlack}!RedBlack@{RedBlack}}
+\index{RedBlack@{RedBlack}!RedBlack@{RedBlack}}
+\doxysubsubsection{\texorpdfstring{RedBlack()}{RedBlack()}}
+{\footnotesize\ttfamily Red\+Black\+::\+Red\+Black (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 46 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47         \{}
+\DoxyCodeLine{48             \mbox{\hyperlink{classRedBlack_abd7fec7f461cb8f465e0eaf52a374022}{rootRB}}=NULL;}
+\DoxyCodeLine{49         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classRedBlack_a9532449abc55416a106fe5f16a1bace1}\label{classRedBlack_a9532449abc55416a106fe5f16a1bace1}} 
+\index{RedBlack@{RedBlack}!insertRB@{insertRB}}
+\index{insertRB@{insertRB}!RedBlack@{RedBlack}}
+\doxysubsubsection{\texorpdfstring{insertRB()}{insertRB()}}
+{\footnotesize\ttfamily void Red\+Black\+::insert\+RB (\begin{DoxyParamCaption}\item[{int}]{d }\end{DoxyParamCaption})}
+
+A function to insert a node in rb tree normally without balancing and recolouring 
+\begin{DoxyParams}{Parameters}
+{\em d} & Stores the data t be inserted \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 58 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{59 \{}
+\DoxyCodeLine{60     \mbox{\hyperlink{classnode}{node}}* temp=\textcolor{keyword}{new} \mbox{\hyperlink{classnode}{node}};}
+\DoxyCodeLine{61     temp-\/>\mbox{\hyperlink{classnode_a2d890bb9f6af0ffd73fe79b21124c2a2}{data}}=d;}
+\DoxyCodeLine{62     \mbox{\hyperlink{classRedBlack_a2d365f6858769e89fa5aeed35b3f3a02}{size}}++;}
+\DoxyCodeLine{63     \textcolor{keywordflow}{if}(\mbox{\hyperlink{classRedBlack_abd7fec7f461cb8f465e0eaf52a374022}{rootRB}}==NULL)}
+\DoxyCodeLine{64     \{\mbox{\hyperlink{classRedBlack_abd7fec7f461cb8f465e0eaf52a374022}{rootRB}}=temp;}
+\DoxyCodeLine{65         \mbox{\hyperlink{classRedBlack_abd7fec7f461cb8f465e0eaf52a374022}{rootRB}}-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}=\textcolor{charliteral}{'b'};}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{68     \{}
+\DoxyCodeLine{69         \mbox{\hyperlink{classnode}{node}}* current=\mbox{\hyperlink{classRedBlack_abd7fec7f461cb8f465e0eaf52a374022}{rootRB}};}
+\DoxyCodeLine{70         \mbox{\hyperlink{classnode}{node}}* tmp=NULL;}
+\DoxyCodeLine{71         \textcolor{keywordtype}{int} c;}
+\DoxyCodeLine{72         \textcolor{keywordflow}{while}(current!=NULL)}
+\DoxyCodeLine{73         \{}
+\DoxyCodeLine{74             tmp=current;}
+\DoxyCodeLine{75             c=current-\/>\mbox{\hyperlink{classnode_a2d890bb9f6af0ffd73fe79b21124c2a2}{data}};}
+\DoxyCodeLine{76             \textcolor{keywordflow}{if}(d>=c)}
+\DoxyCodeLine{77                 current=current-\/>\mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{78 }
+\DoxyCodeLine{79             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(d<c)}
+\DoxyCodeLine{80                 current=current-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}};}
+\DoxyCodeLine{81         \}}
+\DoxyCodeLine{82         \textcolor{keywordflow}{if}(d<tmp-\/>data)}
+\DoxyCodeLine{83         \{tmp-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}}=temp;}
+\DoxyCodeLine{84         \}}
+\DoxyCodeLine{85         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(d>=tmp-\/>\mbox{\hyperlink{classnode_a2d890bb9f6af0ffd73fe79b21124c2a2}{data}})}
+\DoxyCodeLine{86             tmp-\/>\mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}}=temp;}
+\DoxyCodeLine{87         temp-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}}=tmp;}
+\DoxyCodeLine{88         \mbox{\hyperlink{classRedBlack_ad6c8cade6cdf96655d5c9635616e93de}{managePosition}}(temp,\mbox{\hyperlink{classRedBlack_abd7fec7f461cb8f465e0eaf52a374022}{rootRB}});}
+\DoxyCodeLine{89     \}}
+\DoxyCodeLine{90 }
+\DoxyCodeLine{91 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRedBlack_ad6c8cade6cdf96655d5c9635616e93de}\label{classRedBlack_ad6c8cade6cdf96655d5c9635616e93de}} 
+\index{RedBlack@{RedBlack}!managePosition@{managePosition}}
+\index{managePosition@{managePosition}!RedBlack@{RedBlack}}
+\doxysubsubsection{\texorpdfstring{managePosition()}{managePosition()}}
+{\footnotesize\ttfamily void Red\+Black\+::manage\+Position (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}} $\ast$\&}]{ptr,  }\item[{\mbox{\hyperlink{classnode}{node}} $\ast$\&}]{root }\end{DoxyParamCaption})}
+
+The most important function of the red black tree which handles any discrapancies in the tree It takes the root node and the current node as parameters It checks for the uncle node to be red or black and performs the operations accordingly 
+\begin{DoxyParams}{Parameters}
+{\em root} & Stores the data root node of the RB tree \\
+\hline
+{\em ptr} & Stores the current node pointer which has to be rotated \\
+\hline
+\end{DoxyParams}
+parent of the current node
+
+Grand\+Parent of the current node
+
+Definition at line 152 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{153 \{}
+\DoxyCodeLine{154     \mbox{\hyperlink{classnode}{node}}* p=NULL;}
+\DoxyCodeLine{155     \mbox{\hyperlink{classnode}{node}}* gp=NULL;}
+\DoxyCodeLine{156     \textcolor{keywordflow}{while}((ptr!=root)\&\&(ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}}-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}!=\textcolor{charliteral}{'b'})\&\&(ptr-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}!=\textcolor{charliteral}{'b'}))}
+\DoxyCodeLine{157     \{   p=ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}};}
+\DoxyCodeLine{158         gp=ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}}-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}};}
+\DoxyCodeLine{159         \mbox{\hyperlink{classnode}{node}}* uncle=\textcolor{keyword}{new} \mbox{\hyperlink{classnode}{node}}();}
+\DoxyCodeLine{160         \textcolor{keywordflow}{if}(p==gp-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}})}
+\DoxyCodeLine{161         \{   uncle=gp-\/>\mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{162 }
+\DoxyCodeLine{163             \textcolor{keywordflow}{if}(uncle!=NULL\&\&uncle-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}==\textcolor{charliteral}{'r'})}
+\DoxyCodeLine{164             \{}
+\DoxyCodeLine{165                 uncle-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}=\textcolor{charliteral}{'b'};}
+\DoxyCodeLine{166                 p-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}=\textcolor{charliteral}{'b'};}
+\DoxyCodeLine{167                 gp-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}=\textcolor{charliteral}{'r'};}
+\DoxyCodeLine{168                 ptr=gp;}
+\DoxyCodeLine{169             \}}
+\DoxyCodeLine{170             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{171             \{}
+\DoxyCodeLine{172                 \textcolor{keywordflow}{if} (ptr== p-\/>\mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}}) }
+\DoxyCodeLine{173                 \{ }
+\DoxyCodeLine{174                     \mbox{\hyperlink{classRedBlack_a41101a0e1cea9467e4a81280f9717f32}{rotateLeft}}(root,p); }
+\DoxyCodeLine{175                     ptr=p; }
+\DoxyCodeLine{176                     p = ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}}; }
+\DoxyCodeLine{177                 \} }
+\DoxyCodeLine{178                 \mbox{\hyperlink{classRedBlack_a21c3a1678c6832d6d08a8dab217d4e86}{rotateRight}}(root, gp);}
+\DoxyCodeLine{179                 \textcolor{keywordtype}{char} c=p-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}};}
+\DoxyCodeLine{180                 p-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}= gp-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}};}
+\DoxyCodeLine{181                 gp-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}=c; }
+\DoxyCodeLine{182                 ptr=p; }
+\DoxyCodeLine{183             \}}
+\DoxyCodeLine{184         \}}
+\DoxyCodeLine{185         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(p==gp-\/>\mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}})}
+\DoxyCodeLine{186         \{}
+\DoxyCodeLine{187             uncle=gp-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}};}
+\DoxyCodeLine{188             \textcolor{keywordflow}{if}(uncle!=NULL\&\&uncle-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}==\textcolor{charliteral}{'r'})}
+\DoxyCodeLine{189             \{}
+\DoxyCodeLine{190                 uncle-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}=\textcolor{charliteral}{'b'};}
+\DoxyCodeLine{191                 p-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}=\textcolor{charliteral}{'b'};}
+\DoxyCodeLine{192                 gp-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}=\textcolor{charliteral}{'b'};}
+\DoxyCodeLine{193                 ptr=gp;}
+\DoxyCodeLine{194             \}}
+\DoxyCodeLine{195             \textcolor{keywordflow}{else}}
+\DoxyCodeLine{196             \{}
+\DoxyCodeLine{197                 \textcolor{keywordflow}{if} (ptr== p-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}}) }
+\DoxyCodeLine{198                 \{ }
+\DoxyCodeLine{199                     \mbox{\hyperlink{classRedBlack_a21c3a1678c6832d6d08a8dab217d4e86}{rotateRight}}(root, p); }
+\DoxyCodeLine{200                     ptr = p; }
+\DoxyCodeLine{201                     p = ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}}; }
+\DoxyCodeLine{202                 \}}
+\DoxyCodeLine{203                 \mbox{\hyperlink{classRedBlack_a41101a0e1cea9467e4a81280f9717f32}{rotateLeft}}(root, gp); }
+\DoxyCodeLine{204                 \textcolor{keywordtype}{char} c=p-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}};}
+\DoxyCodeLine{205                 p-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}= gp-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}};}
+\DoxyCodeLine{206                 gp-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}=c; }
+\DoxyCodeLine{207                 ptr=p; }
+\DoxyCodeLine{208             \}}
+\DoxyCodeLine{209         \}}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{211     \}}
+\DoxyCodeLine{212     root-\/>\mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}=\textcolor{charliteral}{'b'};}
+\DoxyCodeLine{213 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRedBlack_a41101a0e1cea9467e4a81280f9717f32}\label{classRedBlack_a41101a0e1cea9467e4a81280f9717f32}} 
+\index{RedBlack@{RedBlack}!rotateLeft@{rotateLeft}}
+\index{rotateLeft@{rotateLeft}!RedBlack@{RedBlack}}
+\doxysubsubsection{\texorpdfstring{rotateLeft()}{rotateLeft()}}
+{\footnotesize\ttfamily void Red\+Black\+::rotate\+Left (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}} $\ast$\&}]{root,  }\item[{\mbox{\hyperlink{classnode}{node}} $\ast$\&}]{ptr }\end{DoxyParamCaption})}
+
+A function that performs the left rotations as necessary on the RB Tree 
+\begin{DoxyParams}{Parameters}
+{\em root} & Stores the data root node of the RB tree \\
+\hline
+{\em ptr} & Stores the current node pointer which has to be rotated \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 95 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{96 \{ }
+\DoxyCodeLine{97     \mbox{\hyperlink{classnode}{node}} *pt\_right = ptr-\/>\mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}}; }
+\DoxyCodeLine{98 }
+\DoxyCodeLine{99     ptr-\/>\mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}} = pt\_right-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}}; }
+\DoxyCodeLine{100 }
+\DoxyCodeLine{101     \textcolor{keywordflow}{if} (ptr-\/>\mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}} != NULL) }
+\DoxyCodeLine{102         ptr-\/>\mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}}-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}} = ptr; }
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104     pt\_right-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}} = ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}}; }
+\DoxyCodeLine{105 }
+\DoxyCodeLine{106     \textcolor{keywordflow}{if} (ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}} == NULL) }
+\DoxyCodeLine{107         root = pt\_right; }
+\DoxyCodeLine{108 }
+\DoxyCodeLine{109     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ptr == ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}}-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}}) }
+\DoxyCodeLine{110         ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}}-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}} = pt\_right; }
+\DoxyCodeLine{111 }
+\DoxyCodeLine{112     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{113         ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}}-\/>\mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}} = pt\_right; }
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115     pt\_right-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}} = ptr; }
+\DoxyCodeLine{116     ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}} = pt\_right; }
+\DoxyCodeLine{117 \} }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classRedBlack_a21c3a1678c6832d6d08a8dab217d4e86}\label{classRedBlack_a21c3a1678c6832d6d08a8dab217d4e86}} 
+\index{RedBlack@{RedBlack}!rotateRight@{rotateRight}}
+\index{rotateRight@{rotateRight}!RedBlack@{RedBlack}}
+\doxysubsubsection{\texorpdfstring{rotateRight()}{rotateRight()}}
+{\footnotesize\ttfamily void Red\+Black\+::rotate\+Right (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}} $\ast$\&}]{root,  }\item[{\mbox{\hyperlink{classnode}{node}} $\ast$\&}]{ptr }\end{DoxyParamCaption})}
+
+A function that performs the right rotations as necessary on the RB Tree 
+\begin{DoxyParams}{Parameters}
+{\em root} & Stores the data root node of the RB tree \\
+\hline
+{\em ptr} & Stores the current node pointer which has to be rotated \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 122 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{123 \{ }
+\DoxyCodeLine{124     \mbox{\hyperlink{classnode}{node}} *pt\_left = ptr-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}}; }
+\DoxyCodeLine{125 }
+\DoxyCodeLine{126     ptr-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}} = pt\_left-\/>\mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}}; }
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128     \textcolor{keywordflow}{if} (ptr-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}} != NULL) }
+\DoxyCodeLine{129         ptr-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}}-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}} = ptr; }
+\DoxyCodeLine{130 }
+\DoxyCodeLine{131     pt\_left-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}} = ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}}; }
+\DoxyCodeLine{132 }
+\DoxyCodeLine{133     \textcolor{keywordflow}{if} (ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}} == NULL) }
+\DoxyCodeLine{134         root = pt\_left; }
+\DoxyCodeLine{135 }
+\DoxyCodeLine{136     \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (ptr == ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}}-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}}) }
+\DoxyCodeLine{137         ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}}-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}} = pt\_left; }
+\DoxyCodeLine{138 }
+\DoxyCodeLine{139     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{140         ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}}-\/>\mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}} = pt\_left; }
+\DoxyCodeLine{141 }
+\DoxyCodeLine{142     pt\_left-\/>\mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}} = ptr; }
+\DoxyCodeLine{143     ptr-\/>\mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}} = pt\_left; }
+\DoxyCodeLine{144 \} }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classRedBlack_abd7fec7f461cb8f465e0eaf52a374022}\label{classRedBlack_abd7fec7f461cb8f465e0eaf52a374022}} 
+\index{RedBlack@{RedBlack}!rootRB@{rootRB}}
+\index{rootRB@{rootRB}!RedBlack@{RedBlack}}
+\doxysubsubsection{\texorpdfstring{rootRB}{rootRB}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}}$\ast$ Red\+Black\+::root\+RB}
+
+
+
+number of nodes of the tree 
+
+
+
+Definition at line 45 of file Q1.\+cpp.
+
+\mbox{\Hypertarget{classRedBlack_a2d365f6858769e89fa5aeed35b3f3a02}\label{classRedBlack_a2d365f6858769e89fa5aeed35b3f3a02}} 
+\index{RedBlack@{RedBlack}!size@{size}}
+\index{size@{size}!RedBlack@{RedBlack}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int Red\+Black\+::size}
+
+
+
+Definition at line 44 of file Q1.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Q1_8cpp}{Q1.\+cpp}}\end{DoxyCompactItemize}

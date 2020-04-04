@@ -1,0 +1,144 @@
+\hypertarget{classnode}{}\doxysection{node Class Reference}
+\label{classnode}\index{node@{node}}
+
+
+A node that describes individuals of a tree.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnode_a82669b7358b50bd8d7888d7df4ff8dfa}{node}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classnode_a2d890bb9f6af0ffd73fe79b21124c2a2}{data}}
+\item 
+char \mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}
+\begin{DoxyCompactList}\small\item\em stores the value \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnode}{node}} $\ast$ \mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}}
+\begin{DoxyCompactList}\small\item\em stores the value \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classnode}{node}} $\ast$ \mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}}
+\item 
+\mbox{\hyperlink{classnode}{node}} $\ast$ \mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}}
+\item 
+\mbox{\hyperlink{classnode}{node}} $\ast$ \mbox{\hyperlink{classnode_aad210fa7c160a49f6b9a3ffee592a2bc}{next}}
+\begin{DoxyCompactList}\small\item\em stores the data of node \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A node that describes individuals of a tree. 
+
+Stores the Linked list node. 
+
+Definition at line 10 of file Q1.\+cpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classnode_a82669b7358b50bd8d7888d7df4ff8dfa}\label{classnode_a82669b7358b50bd8d7888d7df4ff8dfa}} 
+\index{node@{node}!node@{node}}
+\index{node@{node}!node@{node}}
+\doxysubsubsection{\texorpdfstring{node()}{node()}}
+{\footnotesize\ttfamily node\+::node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+
+Definition at line 18 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{19         \{}
+\DoxyCodeLine{20             \mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}}=NULL;}
+\DoxyCodeLine{21             \mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}}=NULL;}
+\DoxyCodeLine{22             \mbox{\hyperlink{classnode_a2e137abb123f9d896ab99c03b2b13bb0}{color}}=\textcolor{charliteral}{'r'};}
+\DoxyCodeLine{23             \mbox{\hyperlink{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}{parent}}=NULL;}
+\DoxyCodeLine{24         \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classnode_a2e137abb123f9d896ab99c03b2b13bb0}\label{classnode_a2e137abb123f9d896ab99c03b2b13bb0}} 
+\index{node@{node}!color@{color}}
+\index{color@{color}!node@{node}}
+\doxysubsubsection{\texorpdfstring{color}{color}}
+{\footnotesize\ttfamily char node\+::color}
+
+
+
+stores the value 
+
+
+
+Definition at line 13 of file Q1.\+cpp.
+
+\mbox{\Hypertarget{classnode_a2d890bb9f6af0ffd73fe79b21124c2a2}\label{classnode_a2d890bb9f6af0ffd73fe79b21124c2a2}} 
+\index{node@{node}!data@{data}}
+\index{data@{data}!node@{node}}
+\doxysubsubsection{\texorpdfstring{data}{data}}
+{\footnotesize\ttfamily int node\+::data}
+
+
+
+Definition at line 12 of file Q1.\+cpp.
+
+\mbox{\Hypertarget{classnode_a7cbff55ff448f557223f79299056e9b1}\label{classnode_a7cbff55ff448f557223f79299056e9b1}} 
+\index{node@{node}!left@{left}}
+\index{left@{left}!node@{node}}
+\doxysubsubsection{\texorpdfstring{left}{left}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}}$\ast$ node\+::left}
+
+
+
+stores the value 
+
+
+
+Definition at line 14 of file Q1.\+cpp.
+
+\mbox{\Hypertarget{classnode_aad210fa7c160a49f6b9a3ffee592a2bc}\label{classnode_aad210fa7c160a49f6b9a3ffee592a2bc}} 
+\index{node@{node}!next@{next}}
+\index{next@{next}!node@{node}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}}$\ast$ node\+::next}
+
+
+
+stores the data of node 
+
+
+
+Definition at line 9 of file Q2.\+cpp.
+
+\mbox{\Hypertarget{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}\label{classnode_a5e88137f1d0e2f7a940bccf4c3d3a4d3}} 
+\index{node@{node}!parent@{parent}}
+\index{parent@{parent}!node@{node}}
+\doxysubsubsection{\texorpdfstring{parent}{parent}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}}$\ast$ node\+::parent}
+
+
+
+Definition at line 16 of file Q1.\+cpp.
+
+\mbox{\Hypertarget{classnode_abdc86d4c8604c481752953af3235fc47}\label{classnode_abdc86d4c8604c481752953af3235fc47}} 
+\index{node@{node}!right@{right}}
+\index{right@{right}!node@{node}}
+\doxysubsubsection{\texorpdfstring{right}{right}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}}$\ast$ node\+::right}
+
+
+
+Definition at line 15 of file Q1.\+cpp.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Q1_8cpp}{Q1.\+cpp}}\item 
+\mbox{\hyperlink{Q2_8cpp}{Q2.\+cpp}}\end{DoxyCompactItemize}

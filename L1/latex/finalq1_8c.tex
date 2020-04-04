@@ -1,0 +1,501 @@
+\hypertarget{finalq1_8c}{}\doxysection{finalq1.\+c File Reference}
+\label{finalq1_8c}\index{finalq1.c@{finalq1.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structdetails}{details}}
+\begin{DoxyCompactList}\small\item\em This structure provides ease of use as it stores the details of a student as a separate entity. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structstudentlist}{studentlist}}
+\begin{DoxyCompactList}\small\item\em This struct defines the student list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structdetails}{details}} \mbox{\hyperlink{finalq1_8c_a4a1d29cc2546c4f16e61c0939e494e92}{details}}
+\begin{DoxyCompactList}\small\item\em This structure provides ease of use as it stores the details of a student as a separate entity. \end{DoxyCompactList}\item 
+typedef struct \mbox{\hyperlink{structstudentlist}{studentlist}} \mbox{\hyperlink{finalq1_8c_add8733f0c3384084ee7e4f7abba41286}{studentlist}}
+\begin{DoxyCompactList}\small\item\em This struct defines the student list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{finalq1_8c_adfcaa2e170f43e8b5ca0fdfc47236595}{swap}} (\mbox{\hyperlink{structdetails}{details}} $\ast$s1, \mbox{\hyperlink{structdetails}{details}} $\ast$s2)
+\item 
+void \mbox{\hyperlink{finalq1_8c_a9881e16a1d671c36deaccc447cb7844b}{insert}} (\mbox{\hyperlink{structdetails}{details}} \mbox{\hyperlink{finalq3_8c_a339d22b3e442946380f98ed19e320db2}{s}})
+\item 
+void \mbox{\hyperlink{finalq1_8c_a12fd3f2c520574e41adbf9feab28cb41}{delete}} (int num)
+\item 
+void \mbox{\hyperlink{finalq1_8c_a98cc4f76fdc17eb8b7336339038d20e6}{print}} (\mbox{\hyperlink{structdetails}{details}} data)
+\begin{DoxyCompactList}\small\item\em A small function which accepts the data struct object of a student and prints it$\ast$/. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{finalq1_8c_a1ea95645cb462c8fdb182e0ef9c6befb}{search}} (int num)
+\begin{DoxyCompactList}\small\item\em this method is used to search for a given roll number in the list and print its data \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{finalq1_8c_a27594cd80ed8c72da6c88d690e6619ed}{modify}} (int num)
+\item 
+void \mbox{\hyperlink{finalq1_8c_a9d9172ba87dd2821d5bc73fe8d589900}{bubblesort}} ()
+\item 
+void \mbox{\hyperlink{finalq1_8c_ab85b8cc42ae2db3ea6207aceaa5f6b99}{printstudentlist}} ()
+\item 
+void \mbox{\hyperlink{finalq1_8c_ab28aff825f62315f933266170e529730}{read}} (F\+I\+LE $\ast$f, \mbox{\hyperlink{structdetails}{details}} records\mbox{[}$\,$\mbox{]})
+\item 
+int \mbox{\hyperlink{finalq1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structstudentlist}{studentlist}} $\ast$ \mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}} =N\+U\+LL
+\item 
+int \mbox{\hyperlink{finalq1_8c_a439227feff9d7f55384e8780cfc2eb82}{size}} =0
+\begin{DoxyCompactList}\small\item\em To define the header node. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{finalq1_8c_ab34fdcfb05403628e48814f1bb102bd0}{roll\+\_\+current}} =101
+\item 
+int \mbox{\hyperlink{finalq1_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}} =0
+\item 
+int \mbox{\hyperlink{finalq1_8c_ae606a338dae7ac20a22875d9bad13c19}{queue}} \mbox{[}13\mbox{]} =\{0\}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{finalq1_8c_a4a1d29cc2546c4f16e61c0939e494e92}\label{finalq1_8c_a4a1d29cc2546c4f16e61c0939e494e92}} 
+\index{finalq1.c@{finalq1.c}!details@{details}}
+\index{details@{details}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{details}{details}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structdetails}{details}} \mbox{\hyperlink{structdetails}{details}}}
+
+
+
+This structure provides ease of use as it stores the details of a student as a separate entity. 
+
+\mbox{\Hypertarget{finalq1_8c_add8733f0c3384084ee7e4f7abba41286}\label{finalq1_8c_add8733f0c3384084ee7e4f7abba41286}} 
+\index{finalq1.c@{finalq1.c}!studentlist@{studentlist}}
+\index{studentlist@{studentlist}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{studentlist}{studentlist}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structstudentlist}{studentlist}} \mbox{\hyperlink{structstudentlist}{studentlist}}}
+
+
+
+This struct defines the student list. 
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{finalq1_8c_a9d9172ba87dd2821d5bc73fe8d589900}\label{finalq1_8c_a9d9172ba87dd2821d5bc73fe8d589900}} 
+\index{finalq1.c@{finalq1.c}!bubblesort@{bubblesort}}
+\index{bubblesort@{bubblesort}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{bubblesort()}{bubblesort()}}
+{\footnotesize\ttfamily void bubblesort (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+simple sorting algo to sort the names of the students alphabetically in ascending order It involves the use of strcmp() function of the string header file which is used to compare two functions 
+
+Definition at line 192 of file finalq1.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{193 \{}
+\DoxyCodeLine{194         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{finalq1_8c_a439227feff9d7f55384e8780cfc2eb82}{size}}-\/1; i++)}
+\DoxyCodeLine{195     \{}
+\DoxyCodeLine{196         \mbox{\hyperlink{structstudentlist}{studentlist}}* temp=\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}};}
+\DoxyCodeLine{197         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0; j<\mbox{\hyperlink{finalq1_8c_a439227feff9d7f55384e8780cfc2eb82}{size}}-\/i-\/1; j++)}
+\DoxyCodeLine{198         \{}
+\DoxyCodeLine{199             \mbox{\hyperlink{structstudentlist}{studentlist}}* current=temp;}
+\DoxyCodeLine{200             temp=temp-\/>\mbox{\hyperlink{structstudentlist_a45cf5bfdd077a1b309e4560e138f2232}{right}};}
+\DoxyCodeLine{201                         \textcolor{keywordtype}{int} c=strcmp(current-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a82ee1f844a9a97ed2334cc10d74d4604}{name}},temp-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a82ee1f844a9a97ed2334cc10d74d4604}{name}});}
+\DoxyCodeLine{202                          \textcolor{keywordflow}{if}(c>0)}
+\DoxyCodeLine{203                 \{}
+\DoxyCodeLine{204                                   \mbox{\hyperlink{finalq1_8c_adfcaa2e170f43e8b5ca0fdfc47236595}{swap}}(\&current-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}},\&temp-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}});}
+\DoxyCodeLine{205                          \}}
+\DoxyCodeLine{206                  \}}
+\DoxyCodeLine{207     \}}
+\DoxyCodeLine{208 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{finalq1_8c_a12fd3f2c520574e41adbf9feab28cb41}\label{finalq1_8c_a12fd3f2c520574e41adbf9feab28cb41}} 
+\index{finalq1.c@{finalq1.c}!delete@{delete}}
+\index{delete@{delete}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily void delete (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+delete function takes in the roll number of the node to be deleted. the deleted roll no gets stored in the queue for further use. It also checks for cases where the list is null or the list has only one node 
+
+Definition at line 102 of file finalq1.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{103 \{}
+\DoxyCodeLine{104     \textcolor{keywordflow}{if}(\mbox{\hyperlink{finalq1_8c_a439227feff9d7f55384e8780cfc2eb82}{size}}==0)}
+\DoxyCodeLine{105     \{}
+\DoxyCodeLine{106         printf(\textcolor{stringliteral}{"\(\backslash\)nstudentlist is empty"});}
+\DoxyCodeLine{107         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{108     \}}
+\DoxyCodeLine{109     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{110     \{}
+\DoxyCodeLine{111         \mbox{\hyperlink{structstudentlist}{studentlist}}* current=\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}};}
+\DoxyCodeLine{112         \textcolor{keywordflow}{if}(current-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a42ef67ee6e399aa2371bc145be6c8739}{roll}}==num \&\& \mbox{\hyperlink{finalq1_8c_a439227feff9d7f55384e8780cfc2eb82}{size}}==1)}
+\DoxyCodeLine{113         \{}
+\DoxyCodeLine{114             free(current);}
+\DoxyCodeLine{115             \mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}}=NULL;}
+\DoxyCodeLine{116             \mbox{\hyperlink{finalq1_8c_a439227feff9d7f55384e8780cfc2eb82}{size}}-\/-\/;}
+\DoxyCodeLine{117         \}}
+\DoxyCodeLine{118         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{119         \{}
+\DoxyCodeLine{120             \textcolor{keywordtype}{bool} flag\_check=\textcolor{keyword}{true};}
+\DoxyCodeLine{121             \textcolor{keywordflow}{while}(current!=\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}} || flag\_check)}
+\DoxyCodeLine{122             \{}
+\DoxyCodeLine{123                 flag\_check=\textcolor{keyword}{false};}
+\DoxyCodeLine{124                 \textcolor{keywordflow}{if}(current-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a42ef67ee6e399aa2371bc145be6c8739}{roll}}==num)}
+\DoxyCodeLine{125                 \{}
+\DoxyCodeLine{126                     \mbox{\hyperlink{structstudentlist}{studentlist}}* temp=current-\/>\mbox{\hyperlink{structstudentlist_a283c0bd1bd81ced116094867b59cfff3}{left}};}
+\DoxyCodeLine{127                     \mbox{\hyperlink{structstudentlist}{studentlist}}* temp1=current-\/>\mbox{\hyperlink{structstudentlist_a45cf5bfdd077a1b309e4560e138f2232}{right}};}
+\DoxyCodeLine{128                     temp-\/>\mbox{\hyperlink{structstudentlist_a45cf5bfdd077a1b309e4560e138f2232}{right}}=temp1;}
+\DoxyCodeLine{129                     temp1-\/>\mbox{\hyperlink{structstudentlist_a283c0bd1bd81ced116094867b59cfff3}{left}}=temp;}
+\DoxyCodeLine{130                     \textcolor{keywordflow}{if}(current==\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}})}
+\DoxyCodeLine{131                         \mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}}=temp1;}
+\DoxyCodeLine{132                                         free(current);}
+\DoxyCodeLine{133                     \mbox{\hyperlink{finalq1_8c_a439227feff9d7f55384e8780cfc2eb82}{size}}-\/-\/;}
+\DoxyCodeLine{134                     \mbox{\hyperlink{finalq1_8c_ae606a338dae7ac20a22875d9bad13c19}{queue}}[\mbox{\hyperlink{finalq1_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}}++]=num;}
+\DoxyCodeLine{135                     printf(\textcolor{stringliteral}{"\(\backslash\)nRecord \%d deleted "}, num);}
+\DoxyCodeLine{136                                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{137                 \}}
+\DoxyCodeLine{138                                 }
+\DoxyCodeLine{139                 current=current-\/>\mbox{\hyperlink{structstudentlist_a45cf5bfdd077a1b309e4560e138f2232}{right}};}
+\DoxyCodeLine{140             \}}
+\DoxyCodeLine{141             \textcolor{comment}{//printf("\(\backslash\)nRecord not found");}}
+\DoxyCodeLine{142                   }
+\DoxyCodeLine{143         \}}
+\DoxyCodeLine{144     \}}
+\DoxyCodeLine{145 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{finalq1_8c_a9881e16a1d671c36deaccc447cb7844b}\label{finalq1_8c_a9881e16a1d671c36deaccc447cb7844b}} 
+\index{finalq1.c@{finalq1.c}!insert@{insert}}
+\index{insert@{insert}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void insert (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdetails}{details}}}]{s }\end{DoxyParamCaption})}
+
+This is a function to insert a node into the doubly circular linked list as per the rool number. parameter\+:details of the student It takes into consideration whether any roll no is there in the queue otherwise it assigns a new rol number. It implements a simple algorithm to insert with all the cases kept in the mind. 
+
+Definition at line 46 of file finalq1.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{47 \{}
+\DoxyCodeLine{48     \mbox{\hyperlink{structstudentlist}{studentlist}}* l=(\mbox{\hyperlink{structstudentlist}{studentlist}}*)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structstudentlist}{studentlist}}));}
+\DoxyCodeLine{49     \textcolor{keywordflow}{if}(!l)}
+\DoxyCodeLine{50     \{}
+\DoxyCodeLine{51         printf(\textcolor{stringliteral}{"\(\backslash\)nError"});}
+\DoxyCodeLine{52         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{53     \}}
+\DoxyCodeLine{54     l-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}=\mbox{\hyperlink{finalq3_8c_a339d22b3e442946380f98ed19e320db2}{s}};}
+\DoxyCodeLine{55     \textcolor{keywordflow}{if}(\mbox{\hyperlink{finalq1_8c_ae606a338dae7ac20a22875d9bad13c19}{queue}}[0]==0)}
+\DoxyCodeLine{56     \{}
+\DoxyCodeLine{57         l-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a42ef67ee6e399aa2371bc145be6c8739}{roll}}=\mbox{\hyperlink{finalq1_8c_ab34fdcfb05403628e48814f1bb102bd0}{roll\_current}};}
+\DoxyCodeLine{58         \mbox{\hyperlink{finalq1_8c_ab34fdcfb05403628e48814f1bb102bd0}{roll\_current}}++;}
+\DoxyCodeLine{59     \}}
+\DoxyCodeLine{60     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{61     \{}
+\DoxyCodeLine{62         l-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a42ef67ee6e399aa2371bc145be6c8739}{roll}}=\mbox{\hyperlink{finalq1_8c_ae606a338dae7ac20a22875d9bad13c19}{queue}}[0];}
+\DoxyCodeLine{63         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0; i<\mbox{\hyperlink{finalq1_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}}; i++)}
+\DoxyCodeLine{64             \mbox{\hyperlink{finalq1_8c_ae606a338dae7ac20a22875d9bad13c19}{queue}}[i]=\mbox{\hyperlink{finalq1_8c_ae606a338dae7ac20a22875d9bad13c19}{queue}}[i+1];}
+\DoxyCodeLine{65         \mbox{\hyperlink{finalq1_8c_af93f4f37fc2ad9c37af4a715423b110c}{top}}-\/-\/;}
+\DoxyCodeLine{66     \}}
+\DoxyCodeLine{67     \textcolor{keywordflow}{if}(\mbox{\hyperlink{finalq1_8c_a439227feff9d7f55384e8780cfc2eb82}{size}}==0)}
+\DoxyCodeLine{68     \{}
+\DoxyCodeLine{69         \mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}}=l;}
+\DoxyCodeLine{70         \mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}}-\/>\mbox{\hyperlink{structstudentlist_a45cf5bfdd077a1b309e4560e138f2232}{right}}=\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}};}
+\DoxyCodeLine{71         \mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}}-\/>\mbox{\hyperlink{structstudentlist_a283c0bd1bd81ced116094867b59cfff3}{left}}=\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}};}
+\DoxyCodeLine{72     \}}
+\DoxyCodeLine{73     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{74     \{}
+\DoxyCodeLine{75         \mbox{\hyperlink{structstudentlist}{studentlist}}* current=\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}};}
+\DoxyCodeLine{76         \mbox{\hyperlink{structstudentlist}{studentlist}}* prev=\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}}-\/>\mbox{\hyperlink{structstudentlist_a283c0bd1bd81ced116094867b59cfff3}{left}};}
+\DoxyCodeLine{77         \textcolor{keywordtype}{int} flag=0,check=1;}
+\DoxyCodeLine{78         \textcolor{keywordflow}{while}(current!=\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}} || check)}
+\DoxyCodeLine{79         \{       }
+\DoxyCodeLine{80             check=0;}
+\DoxyCodeLine{81             \textcolor{keywordflow}{if}(l-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a42ef67ee6e399aa2371bc145be6c8739}{roll}}<current-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a42ef67ee6e399aa2371bc145be6c8739}{roll}})}
+\DoxyCodeLine{82             \{}
+\DoxyCodeLine{83                 \textcolor{keywordflow}{if}(current==\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}})   }
+\DoxyCodeLine{84                     flag=1;}
+\DoxyCodeLine{85                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{86             \}}
+\DoxyCodeLine{87             current=current-\/>\mbox{\hyperlink{structstudentlist_a45cf5bfdd077a1b309e4560e138f2232}{right}};}
+\DoxyCodeLine{88             prev=prev-\/>\mbox{\hyperlink{structstudentlist_a45cf5bfdd077a1b309e4560e138f2232}{right}};}
+\DoxyCodeLine{89         \}}
+\DoxyCodeLine{90         prev-\/>\mbox{\hyperlink{structstudentlist_a45cf5bfdd077a1b309e4560e138f2232}{right}}=l;}
+\DoxyCodeLine{91         current-\/>\mbox{\hyperlink{structstudentlist_a283c0bd1bd81ced116094867b59cfff3}{left}}=l;}
+\DoxyCodeLine{92         l-\/>\mbox{\hyperlink{structstudentlist_a45cf5bfdd077a1b309e4560e138f2232}{right}}=current;}
+\DoxyCodeLine{93         l-\/>\mbox{\hyperlink{structstudentlist_a283c0bd1bd81ced116094867b59cfff3}{left}}=prev;}
+\DoxyCodeLine{94         \textcolor{keywordflow}{if}(flag)}
+\DoxyCodeLine{95             \mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}}=l;}
+\DoxyCodeLine{96     \}}
+\DoxyCodeLine{97     \mbox{\hyperlink{finalq1_8c_a439227feff9d7f55384e8780cfc2eb82}{size}}++;}
+\DoxyCodeLine{98 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{finalq1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{finalq1_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{finalq1.c@{finalq1.c}!main@{main}}
+\index{main@{main}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Main function opens the Student\+Data.\+csv file in the read mode and the operations mentioned in the question are performed ~\newline
+ 
+
+Definition at line 255 of file finalq1.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{256 \{}
+\DoxyCodeLine{257     \mbox{\hyperlink{structdetails}{details}} entry\_no[13];}
+\DoxyCodeLine{258     FILE* file;}
+\DoxyCodeLine{259     file=fopen(\textcolor{stringliteral}{"StudentData.csv"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{260     \mbox{\hyperlink{finalq1_8c_ab28aff825f62315f933266170e529730}{read}}(file,entry\_no);}
+\DoxyCodeLine{261     \textcolor{keyword}{delete}(108);}
+\DoxyCodeLine{262     \mbox{\hyperlink{finalq1_8c_a9881e16a1d671c36deaccc447cb7844b}{insert}}(entry\_no[0]);}
+\DoxyCodeLine{263     \mbox{\hyperlink{finalq1_8c_a9881e16a1d671c36deaccc447cb7844b}{insert}}(entry\_no[1]);}
+\DoxyCodeLine{264     \mbox{\hyperlink{finalq1_8c_a9881e16a1d671c36deaccc447cb7844b}{insert}}(entry\_no[2]);}
+\DoxyCodeLine{265     \mbox{\hyperlink{finalq1_8c_a9881e16a1d671c36deaccc447cb7844b}{insert}}(entry\_no[3]);}
+\DoxyCodeLine{266     \textcolor{comment}{//printstudentlist();}}
+\DoxyCodeLine{267     \textcolor{keyword}{delete}(102);}
+\DoxyCodeLine{268     \textcolor{keyword}{delete}(101);}
+\DoxyCodeLine{269     \textcolor{comment}{//printstudentlist();}}
+\DoxyCodeLine{270         \mbox{\hyperlink{finalq1_8c_a9881e16a1d671c36deaccc447cb7844b}{insert}}(entry\_no[4]);}
+\DoxyCodeLine{271     \mbox{\hyperlink{finalq1_8c_a9881e16a1d671c36deaccc447cb7844b}{insert}}(entry\_no[5]);}
+\DoxyCodeLine{272     \mbox{\hyperlink{finalq1_8c_a9881e16a1d671c36deaccc447cb7844b}{insert}}(entry\_no[6]);}
+\DoxyCodeLine{273         \mbox{\hyperlink{finalq1_8c_ab85b8cc42ae2db3ea6207aceaa5f6b99}{printstudentlist}}();}
+\DoxyCodeLine{274         \mbox{\hyperlink{finalq1_8c_a9d9172ba87dd2821d5bc73fe8d589900}{bubblesort}}();}
+\DoxyCodeLine{275         \mbox{\hyperlink{finalq1_8c_ab85b8cc42ae2db3ea6207aceaa5f6b99}{printstudentlist}}();}
+\DoxyCodeLine{276     \mbox{\hyperlink{finalq1_8c_a27594cd80ed8c72da6c88d690e6619ed}{modify}}(103);}
+\DoxyCodeLine{277     \mbox{\hyperlink{finalq1_8c_ab85b8cc42ae2db3ea6207aceaa5f6b99}{printstudentlist}}();}
+\DoxyCodeLine{278     fclose(file);}
+\DoxyCodeLine{279 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{finalq1_8c_a27594cd80ed8c72da6c88d690e6619ed}\label{finalq1_8c_a27594cd80ed8c72da6c88d690e6619ed}} 
+\index{finalq1.c@{finalq1.c}!modify@{modify}}
+\index{modify@{modify}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{modify()}{modify()}}
+{\footnotesize\ttfamily void modify (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+This function is used to modify the data of the given roll number It searches for the given roll no and then changes the data as per the users requirement 
+
+Definition at line 166 of file finalq1.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{167 \{}
+\DoxyCodeLine{168     \textcolor{keywordtype}{char} str\_name[30]=\textcolor{stringliteral}{"Ritesh Jhunjhunwala"};}
+\DoxyCodeLine{169         \textcolor{keywordtype}{char} str\_address[100]=\textcolor{stringliteral}{"1600 Pennsylvania Avenue NW in Washington, D.C. "};}
+\DoxyCodeLine{170     \mbox{\hyperlink{structstudentlist}{studentlist}}* temp=\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}};}
+\DoxyCodeLine{171     \textcolor{keywordflow}{if}(\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}}-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a42ef67ee6e399aa2371bc145be6c8739}{roll}}==num)}
+\DoxyCodeLine{172               \{}
+\DoxyCodeLine{173         strcpy(temp-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a82ee1f844a9a97ed2334cc10d74d4604}{name}}, str\_name);}
+\DoxyCodeLine{174                 strcpy(temp-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a6a76793f43c60371820a71e2aaa31d4d}{address}}, str\_address);}
+\DoxyCodeLine{175                \}    }
+\DoxyCodeLine{176     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{177     \{}
+\DoxyCodeLine{178         temp=temp-\/>\mbox{\hyperlink{structstudentlist_a45cf5bfdd077a1b309e4560e138f2232}{right}};}
+\DoxyCodeLine{179         \textcolor{keywordflow}{while}(temp!=\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}})}
+\DoxyCodeLine{180         \{}
+\DoxyCodeLine{181             \textcolor{keywordflow}{if}(temp-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a42ef67ee6e399aa2371bc145be6c8739}{roll}}==num)}
+\DoxyCodeLine{182                 \{strcpy(temp-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a82ee1f844a9a97ed2334cc10d74d4604}{name}}, str\_name);}
+\DoxyCodeLine{183                                   strcpy(temp-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a6a76793f43c60371820a71e2aaa31d4d}{address}}, str\_address);}
+\DoxyCodeLine{184                                 \}   }
+\DoxyCodeLine{185             temp=temp-\/>\mbox{\hyperlink{structstudentlist_a45cf5bfdd077a1b309e4560e138f2232}{right}};}
+\DoxyCodeLine{186         \}}
+\DoxyCodeLine{187     \}}
+\DoxyCodeLine{188 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{finalq1_8c_a98cc4f76fdc17eb8b7336339038d20e6}\label{finalq1_8c_a98cc4f76fdc17eb8b7336339038d20e6}} 
+\index{finalq1.c@{finalq1.c}!print@{print}}
+\index{print@{print}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void print (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdetails}{details}}}]{data }\end{DoxyParamCaption})}
+
+
+
+A small function which accepts the data struct object of a student and prints it$\ast$/. 
+
+
+
+Definition at line 147 of file finalq1.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{148 \{}
+\DoxyCodeLine{149     printf(\textcolor{stringliteral}{"\(\backslash\)nRoll: \%d"}, \mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a42ef67ee6e399aa2371bc145be6c8739}{roll}});}
+\DoxyCodeLine{150     printf(\textcolor{stringliteral}{"\(\backslash\)nName: \%s"}, \mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a82ee1f844a9a97ed2334cc10d74d4604}{name}});}
+\DoxyCodeLine{151     printf(\textcolor{stringliteral}{"\(\backslash\)nD.O.B: \%s"}, \mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a5a3bd008a150d4dcd4f52dca4b34614e}{dob}});}
+\DoxyCodeLine{152 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{finalq1_8c_ab85b8cc42ae2db3ea6207aceaa5f6b99}\label{finalq1_8c_ab85b8cc42ae2db3ea6207aceaa5f6b99}} 
+\index{finalq1.c@{finalq1.c}!printstudentlist@{printstudentlist}}
+\index{printstudentlist@{printstudentlist}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{printstudentlist()}{printstudentlist()}}
+{\footnotesize\ttfamily void printstudentlist (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A function which traverses through the entire doubly linked list untill head node is encountered again and prints the details of the students 
+
+Definition at line 211 of file finalq1.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{212 \{}
+\DoxyCodeLine{213     \mbox{\hyperlink{structstudentlist}{studentlist}}* temp=\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}};}
+\DoxyCodeLine{214     \textcolor{keywordtype}{int} i=0;}
+\DoxyCodeLine{215     \textcolor{keywordflow}{if}(\mbox{\hyperlink{finalq1_8c_a439227feff9d7f55384e8780cfc2eb82}{size}}==0)}
+\DoxyCodeLine{216         printf(\textcolor{stringliteral}{"\(\backslash\)nError"});}
+\DoxyCodeLine{217     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{218     \{}
+\DoxyCodeLine{219         \mbox{\hyperlink{finalq1_8c_a98cc4f76fdc17eb8b7336339038d20e6}{print}}(\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}}-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}});}
+\DoxyCodeLine{220         temp=temp-\/>\mbox{\hyperlink{structstudentlist_a45cf5bfdd077a1b309e4560e138f2232}{right}};}
+\DoxyCodeLine{221         \textcolor{keywordflow}{while}(temp!=\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}})}
+\DoxyCodeLine{222         \{}
+\DoxyCodeLine{223             \mbox{\hyperlink{finalq1_8c_a98cc4f76fdc17eb8b7336339038d20e6}{print}}(temp-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}});}
+\DoxyCodeLine{224             temp=temp-\/>\mbox{\hyperlink{structstudentlist_a45cf5bfdd077a1b309e4560e138f2232}{right}};}
+\DoxyCodeLine{225         \}}
+\DoxyCodeLine{226     \}}
+\DoxyCodeLine{227 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{finalq1_8c_ab28aff825f62315f933266170e529730}\label{finalq1_8c_ab28aff825f62315f933266170e529730}} 
+\index{finalq1.c@{finalq1.c}!read@{read}}
+\index{read@{read}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{read()}{read()}}
+{\footnotesize\ttfamily void read (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{\mbox{\hyperlink{structdetails}{details}}}]{records\mbox{[}$\,$\mbox{]} }\end{DoxyParamCaption})}
+
+Note the .xlsx file has been changed to .csv with semicolon as separator to read the data from file A function to read data and store it in the respective places in there respective formats from a given file given to it with the use of fgets we navigate through the file using T\+HE D\+E\+L\+I\+M\+I\+T\+ER \textquotesingle{};\textquotesingle{} and using strtok we get the corresponding string ~\newline
+ 
+
+Definition at line 232 of file finalq1.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{233 \{}
+\DoxyCodeLine{234     \textcolor{keywordtype}{char} inp[1000];}
+\DoxyCodeLine{235     \textcolor{keywordtype}{short} \textcolor{keywordtype}{int} count=0;}
+\DoxyCodeLine{236     fgets(inp,1000,f);}
+\DoxyCodeLine{237     \textcolor{keywordflow}{while}(fgets(inp,1000,f))}
+\DoxyCodeLine{238     \{}
+\DoxyCodeLine{239         \textcolor{keywordtype}{char}* input\_line\_values = strtok(inp,\textcolor{stringliteral}{";"});}
+\DoxyCodeLine{240         input\_line\_values = strtok(NULL,\textcolor{stringliteral}{";"});}
+\DoxyCodeLine{241         strcpy(records[count].name,input\_line\_values);}
+\DoxyCodeLine{242         input\_line\_values = strtok(NULL,\textcolor{stringliteral}{";"});}
+\DoxyCodeLine{243         strcpy(records[count].dob,input\_line\_values);}
+\DoxyCodeLine{244         input\_line\_values = strtok(NULL,\textcolor{stringliteral}{";"});}
+\DoxyCodeLine{245         strcpy(records[count].address,input\_line\_values);}
+\DoxyCodeLine{246         input\_line\_values = strtok(NULL,\textcolor{stringliteral}{";"});}
+\DoxyCodeLine{247         \textcolor{keywordtype}{int} num = atoi(input\_line\_values);}
+\DoxyCodeLine{248         records[count].\mbox{\hyperlink{structdetails_a7e474fdd459845f9c8522f9299734f4d}{phone}}=num;}
+\DoxyCodeLine{249         count++;    }
+\DoxyCodeLine{250     \}}
+\DoxyCodeLine{251 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{finalq1_8c_a1ea95645cb462c8fdb182e0ef9c6befb}\label{finalq1_8c_a1ea95645cb462c8fdb182e0ef9c6befb}} 
+\index{finalq1.c@{finalq1.c}!search@{search}}
+\index{search@{search}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{search()}{search()}}
+{\footnotesize\ttfamily void search (\begin{DoxyParamCaption}\item[{int}]{num }\end{DoxyParamCaption})}
+
+
+
+this method is used to search for a given roll number in the list and print its data 
+
+
+
+Definition at line 154 of file finalq1.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{155 \{}
+\DoxyCodeLine{156     \mbox{\hyperlink{structstudentlist}{studentlist}}* temp=\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}};}
+\DoxyCodeLine{157     \textcolor{keywordflow}{do}}
+\DoxyCodeLine{158     \{}
+\DoxyCodeLine{159         \textcolor{keywordflow}{if}(temp-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}}.\mbox{\hyperlink{structdetails_a42ef67ee6e399aa2371bc145be6c8739}{roll}}==num)}
+\DoxyCodeLine{160             \mbox{\hyperlink{finalq1_8c_a98cc4f76fdc17eb8b7336339038d20e6}{print}}(temp-\/>\mbox{\hyperlink{structstudentlist_ac51ffef41c3f9d7ce39e570f01e08214}{data}});}
+\DoxyCodeLine{161     \}\textcolor{keywordflow}{while}(temp-\/>\mbox{\hyperlink{structstudentlist_a45cf5bfdd077a1b309e4560e138f2232}{right}}!=\mbox{\hyperlink{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}{head}});}
+\DoxyCodeLine{162 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{finalq1_8c_adfcaa2e170f43e8b5ca0fdfc47236595}\label{finalq1_8c_adfcaa2e170f43e8b5ca0fdfc47236595}} 
+\index{finalq1.c@{finalq1.c}!swap@{swap}}
+\index{swap@{swap}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily void swap (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structdetails}{details}} $\ast$}]{s1,  }\item[{\mbox{\hyperlink{structdetails}{details}} $\ast$}]{s2 }\end{DoxyParamCaption})}
+
+this methood is to swap two nodes while sorting as per the requirement of the user It uses memmove() function to copy a given memory set to another 
+
+Definition at line 26 of file finalq1.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28       \mbox{\hyperlink{structdetails}{details}} *t=(\mbox{\hyperlink{structdetails}{details}} *)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structdetails}{details}}));}
+\DoxyCodeLine{29       memmove(t,s2,\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structdetails}{details}}));}
+\DoxyCodeLine{30       memmove(s2,s1,\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structdetails}{details}}));}
+\DoxyCodeLine{31       memmove(s1,t,\textcolor{keyword}{sizeof}(\mbox{\hyperlink{structdetails}{details}}));}
+\DoxyCodeLine{32       free(t);     }
+\DoxyCodeLine{33 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}\label{finalq1_8c_adae9ba807909b391fdd4cf52deea4c6c}} 
+\index{finalq1.c@{finalq1.c}!head@{head}}
+\index{head@{head}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structstudentlist}{studentlist}}$\ast$ head =N\+U\+LL}
+
+
+
+Definition at line 21 of file finalq1.\+c.
+
+\mbox{\Hypertarget{finalq1_8c_ae606a338dae7ac20a22875d9bad13c19}\label{finalq1_8c_ae606a338dae7ac20a22875d9bad13c19}} 
+\index{finalq1.c@{finalq1.c}!queue@{queue}}
+\index{queue@{queue}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{queue}{queue}}
+{\footnotesize\ttfamily int queue\mbox{[}13\mbox{]} =\{0\}}
+
+
+
+Definition at line 22 of file finalq1.\+c.
+
+\mbox{\Hypertarget{finalq1_8c_ab34fdcfb05403628e48814f1bb102bd0}\label{finalq1_8c_ab34fdcfb05403628e48814f1bb102bd0}} 
+\index{finalq1.c@{finalq1.c}!roll\_current@{roll\_current}}
+\index{roll\_current@{roll\_current}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{roll\_current}{roll\_current}}
+{\footnotesize\ttfamily int roll\+\_\+current =101}
+
+
+
+Definition at line 22 of file finalq1.\+c.
+
+\mbox{\Hypertarget{finalq1_8c_a439227feff9d7f55384e8780cfc2eb82}\label{finalq1_8c_a439227feff9d7f55384e8780cfc2eb82}} 
+\index{finalq1.c@{finalq1.c}!size@{size}}
+\index{size@{size}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int size =0}
+
+
+
+To define the header node. 
+
+
+
+Definition at line 22 of file finalq1.\+c.
+
+\mbox{\Hypertarget{finalq1_8c_af93f4f37fc2ad9c37af4a715423b110c}\label{finalq1_8c_af93f4f37fc2ad9c37af4a715423b110c}} 
+\index{finalq1.c@{finalq1.c}!top@{top}}
+\index{top@{top}!finalq1.c@{finalq1.c}}
+\doxysubsubsection{\texorpdfstring{top}{top}}
+{\footnotesize\ttfamily int top =0}
+
+
+
+Definition at line 22 of file finalq1.\+c.
+

@@ -1,0 +1,117 @@
+\hypertarget{Q2_8cpp}{}\doxysection{Q2.\+cpp File Reference}
+\label{Q2_8cpp}\index{Q2.cpp@{Q2.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$iomanip$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classnode}{node}}
+\begin{DoxyCompactList}\small\item\em A node that describes individuals of a tree. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classLList}{L\+List}}
+\begin{DoxyCompactList}\small\item\em A class which defines the operations on the linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{Q2_8cpp_ac4eb0336837caefdf93972df78421c3c}{print}} (int \mbox{\hyperlink{Q1_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}, int k)
+\item 
+int \mbox{\hyperlink{Q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{Q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{Q2_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{Q2.cpp@{Q2.cpp}!main@{main}}
+\index{main@{main}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Consists of an algorithm in which we find the cumulative xor of elements and store it in n when this cumulative xor becomes zero we print it... Stores the elements in a linked list
+
+To store the position of i in a linked list
+
+To store the position of k in a linked list
+
+number of elements
+
+Total number of triplets
+
+Definition at line 53 of file Q2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{54 \{}
+\DoxyCodeLine{55     clock\_t start, end; }
+\DoxyCodeLine{56     start = clock(); }
+\DoxyCodeLine{57     \mbox{\hyperlink{classLList}{LList}} a;}
+\DoxyCodeLine{58     \mbox{\hyperlink{classLList}{LList}} storei;}
+\DoxyCodeLine{59     \mbox{\hyperlink{classLList}{LList}} storek;}
+\DoxyCodeLine{60     \textcolor{keywordtype}{int} n;}
+\DoxyCodeLine{61     \textcolor{keywordtype}{int} count=0;}
+\DoxyCodeLine{62     cin >> n;}
+\DoxyCodeLine{63     \textcolor{keywordtype}{int} d;}
+\DoxyCodeLine{64     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{Q1_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}=0;\mbox{\hyperlink{Q1_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}<n;\mbox{\hyperlink{Q1_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++)}
+\DoxyCodeLine{65     \{}
+\DoxyCodeLine{66         cin >> d;}
+\DoxyCodeLine{67         a.\mbox{\hyperlink{classLList_ad2a2b186ecbe62b4c8864c12625e2cf5}{insert}}(d);}
+\DoxyCodeLine{68     \}}
+\DoxyCodeLine{69     \mbox{\hyperlink{classnode}{node}}* current=a.\mbox{\hyperlink{classLList_ab460046756d5eb360433b4990b42651d}{head}};}
+\DoxyCodeLine{70     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{Q1_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}=1;current-\/>\mbox{\hyperlink{classnode_aad210fa7c160a49f6b9a3ffee592a2bc}{next}}!=NULL;\mbox{\hyperlink{Q1_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++)}
+\DoxyCodeLine{71     \{}
+\DoxyCodeLine{72         \textcolor{keywordtype}{int} n=current-\/>\mbox{\hyperlink{classnode_a2d890bb9f6af0ffd73fe79b21124c2a2}{data}};}
+\DoxyCodeLine{73         \mbox{\hyperlink{classnode}{node}}* tmp=current-\/>\mbox{\hyperlink{classnode_aad210fa7c160a49f6b9a3ffee592a2bc}{next}};}
+\DoxyCodeLine{74         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=\mbox{\hyperlink{Q1_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}+1;tmp!=NULL;j++)}
+\DoxyCodeLine{75         \{}
+\DoxyCodeLine{76             n=n\string^tmp-\/>\mbox{\hyperlink{classnode_a2d890bb9f6af0ffd73fe79b21124c2a2}{data}};}
+\DoxyCodeLine{77             \textcolor{keywordflow}{if}(n==0)}
+\DoxyCodeLine{78             \{}
+\DoxyCodeLine{79                 count+=(j-\/\mbox{\hyperlink{Q1_8cpp_acb559820d9ca11295b4500f179ef6392}{i}});}
+\DoxyCodeLine{80                 storei.\mbox{\hyperlink{classLList_ad2a2b186ecbe62b4c8864c12625e2cf5}{insert}}(\mbox{\hyperlink{Q1_8cpp_acb559820d9ca11295b4500f179ef6392}{i}});}
+\DoxyCodeLine{81                 storek.\mbox{\hyperlink{classLList_ad2a2b186ecbe62b4c8864c12625e2cf5}{insert}}(j);}
+\DoxyCodeLine{82             \}}
+\DoxyCodeLine{83             tmp=tmp-\/>\mbox{\hyperlink{classnode_aad210fa7c160a49f6b9a3ffee592a2bc}{next}};}
+\DoxyCodeLine{84         \}}
+\DoxyCodeLine{85         current=current-\/>\mbox{\hyperlink{classnode_aad210fa7c160a49f6b9a3ffee592a2bc}{next}};}
+\DoxyCodeLine{86     \}}
+\DoxyCodeLine{87     cout<<count<<\textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{88     \mbox{\hyperlink{classnode}{node}}* temp=storei.\mbox{\hyperlink{classLList_ab460046756d5eb360433b4990b42651d}{head}};}
+\DoxyCodeLine{89     \mbox{\hyperlink{classnode}{node}}* temp2=storek.\mbox{\hyperlink{classLList_ab460046756d5eb360433b4990b42651d}{head}};}
+\DoxyCodeLine{90     \textcolor{keywordflow}{while}(temp!=NULL)}
+\DoxyCodeLine{91     \{\mbox{\hyperlink{Q2_8cpp_ac4eb0336837caefdf93972df78421c3c}{print}}(temp-\/>\mbox{\hyperlink{classnode_a2d890bb9f6af0ffd73fe79b21124c2a2}{data}},temp2-\/>\mbox{\hyperlink{classnode_a2d890bb9f6af0ffd73fe79b21124c2a2}{data}});}
+\DoxyCodeLine{92         temp=temp-\/>\mbox{\hyperlink{classnode_aad210fa7c160a49f6b9a3ffee592a2bc}{next}};}
+\DoxyCodeLine{93         temp2=temp2-\/>\mbox{\hyperlink{classnode_aad210fa7c160a49f6b9a3ffee592a2bc}{next}};}
+\DoxyCodeLine{94     \}}
+\DoxyCodeLine{95     end = clock();}
+\DoxyCodeLine{96     \textcolor{keywordtype}{double} time\_taken = double(end -\/ start) / double(CLOCKS\_PER\_SEC); }
+\DoxyCodeLine{97     cout << \textcolor{stringliteral}{"Time taken by program is : "} << fixed  }
+\DoxyCodeLine{98         << time\_taken << setprecision(5); }
+\DoxyCodeLine{99     cout << \textcolor{stringliteral}{" sec "} << endl; }
+\DoxyCodeLine{100     \textcolor{keywordflow}{return} 0; }
+\DoxyCodeLine{101 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{Q2_8cpp_ac4eb0336837caefdf93972df78421c3c}\label{Q2_8cpp_ac4eb0336837caefdf93972df78421c3c}} 
+\index{Q2.cpp@{Q2.cpp}!print@{print}}
+\index{print@{print}!Q2.cpp@{Q2.cpp}}
+\doxysubsubsection{\texorpdfstring{print()}{print()}}
+{\footnotesize\ttfamily void print (\begin{DoxyParamCaption}\item[{int}]{i,  }\item[{int}]{k }\end{DoxyParamCaption})}
+
+A function to print the triplets 
+\begin{DoxyParams}{Parameters}
+{\em i} & stores the starting index number \\
+\hline
+{\em k} & stores the ending index number \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 44 of file Q2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{45 \{}
+\DoxyCodeLine{46     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} a=\mbox{\hyperlink{Q1_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}+1;a<=k;a++)}
+\DoxyCodeLine{47         cout<<\textcolor{stringliteral}{"("}<<\mbox{\hyperlink{Q1_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}<<\textcolor{stringliteral}{","}<<a<<\textcolor{stringliteral}{","}<<k<<\textcolor{stringliteral}{")"}<<\textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{48 \}}
+
+\end{DoxyCode}

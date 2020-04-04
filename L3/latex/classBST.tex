@@ -1,0 +1,158 @@
+\hypertarget{classBST}{}\doxysection{B\+ST Class Reference}
+\label{classBST}\index{BST@{BST}}
+
+
+Defines the operations on Binary search Tree.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classBST_abc17123a0367c3b8ad0382eeb3ad3178}{B\+ST}} ()
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classBST_ad286bd3e53e59a8500278370d5a2f3e6}{insert}} (int d)
+\item 
+void \mbox{\hyperlink{classBST_a3c749bbf7a496957c58f6e1e4c255cf5}{give\+Inorder\+Array}} (\mbox{\hyperlink{classnode}{node}} $\ast$\mbox{\hyperlink{classBST_a1bf7d5580b1bc2c9551f0a6cf4feeb5e}{root}})
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnode}{node}} $\ast$ \mbox{\hyperlink{classBST_a1bf7d5580b1bc2c9551f0a6cf4feeb5e}{root}}
+\item 
+int \mbox{\hyperlink{classBST_a07080573844039dc3e417a30877414a2}{size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Defines the operations on Binary search Tree. 
+
+Definition at line 27 of file Q1.\+cpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classBST_abc17123a0367c3b8ad0382eeb3ad3178}\label{classBST_abc17123a0367c3b8ad0382eeb3ad3178}} 
+\index{BST@{BST}!BST@{BST}}
+\index{BST@{BST}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{BST()}{BST()}}
+{\footnotesize\ttfamily B\+S\+T\+::\+B\+ST (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+
+
+Definition at line 31 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{32         \{}
+\DoxyCodeLine{33             \mbox{\hyperlink{classBST_a1bf7d5580b1bc2c9551f0a6cf4feeb5e}{root}}=NULL;}
+\DoxyCodeLine{34         \}    }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classBST_a3c749bbf7a496957c58f6e1e4c255cf5}\label{classBST_a3c749bbf7a496957c58f6e1e4c255cf5}} 
+\index{BST@{BST}!giveInorderArray@{giveInorderArray}}
+\index{giveInorderArray@{giveInorderArray}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{giveInorderArray()}{giveInorderArray()}}
+{\footnotesize\ttfamily void B\+S\+T\+::give\+Inorder\+Array (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classnode}{node}} $\ast$}]{root }\end{DoxyParamCaption})}
+
+A function to give the inorder array from the given root node 
+\begin{DoxyParams}{Parameters}
+{\em root} & Stores the data root node of the given tree whose inorder is to be stored \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 248 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{249 \{}
+\DoxyCodeLine{250     \textcolor{keywordflow}{if}(!\mbox{\hyperlink{classBST_a1bf7d5580b1bc2c9551f0a6cf4feeb5e}{root}})}
+\DoxyCodeLine{251         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{252     \mbox{\hyperlink{classBST_a3c749bbf7a496957c58f6e1e4c255cf5}{giveInorderArray}}(\mbox{\hyperlink{classBST_a1bf7d5580b1bc2c9551f0a6cf4feeb5e}{root}}-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}});}
+\DoxyCodeLine{253     \mbox{\hyperlink{Q1_8cpp_acbddc7160280aea531941a9b78819567}{arr}}[\mbox{\hyperlink{Q1_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++]=\mbox{\hyperlink{classBST_a1bf7d5580b1bc2c9551f0a6cf4feeb5e}{root}}-\/>\mbox{\hyperlink{classnode_a2d890bb9f6af0ffd73fe79b21124c2a2}{data}};}
+\DoxyCodeLine{254     \mbox{\hyperlink{classBST_a3c749bbf7a496957c58f6e1e4c255cf5}{giveInorderArray}}(\mbox{\hyperlink{classBST_a1bf7d5580b1bc2c9551f0a6cf4feeb5e}{root}}-\/>\mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}});}
+\DoxyCodeLine{255 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classBST_ad286bd3e53e59a8500278370d5a2f3e6}\label{classBST_ad286bd3e53e59a8500278370d5a2f3e6}} 
+\index{BST@{BST}!insert@{insert}}
+\index{insert@{insert}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void B\+S\+T\+::insert (\begin{DoxyParamCaption}\item[{int}]{d }\end{DoxyParamCaption})}
+
+A function to insert into the \mbox{\hyperlink{classBST}{B\+ST}} Tree using basic methods 
+\begin{DoxyParams}{Parameters}
+{\em d} & Stores the data to be inserted into the tree \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 216 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{217 \{}
+\DoxyCodeLine{218     \mbox{\hyperlink{classnode}{node}}* temp=\textcolor{keyword}{new} \mbox{\hyperlink{classnode}{node}};}
+\DoxyCodeLine{219     temp-\/>\mbox{\hyperlink{classnode_a2d890bb9f6af0ffd73fe79b21124c2a2}{data}}=d;}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221     \textcolor{keywordflow}{if}(\mbox{\hyperlink{classBST_a1bf7d5580b1bc2c9551f0a6cf4feeb5e}{root}}==NULL)}
+\DoxyCodeLine{222         \mbox{\hyperlink{classBST_a1bf7d5580b1bc2c9551f0a6cf4feeb5e}{root}}=temp;}
+\DoxyCodeLine{223     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{224     \{}
+\DoxyCodeLine{225         \mbox{\hyperlink{classnode}{node}}* current=\mbox{\hyperlink{classBST_a1bf7d5580b1bc2c9551f0a6cf4feeb5e}{root}};}
+\DoxyCodeLine{226         \mbox{\hyperlink{classnode}{node}}* tmp=NULL;}
+\DoxyCodeLine{227         \textcolor{keywordtype}{int} c;}
+\DoxyCodeLine{228         \textcolor{keywordflow}{while}(current!=NULL)}
+\DoxyCodeLine{229         \{}
+\DoxyCodeLine{230             tmp=current;}
+\DoxyCodeLine{231             c=current-\/>\mbox{\hyperlink{classnode_a2d890bb9f6af0ffd73fe79b21124c2a2}{data}};}
+\DoxyCodeLine{232             \textcolor{keywordflow}{if}(d>=c)}
+\DoxyCodeLine{233                 current=current-\/>\mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}};}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{235             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(d<c)}
+\DoxyCodeLine{236                 current=current-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}};}
+\DoxyCodeLine{237         \}}
+\DoxyCodeLine{238         \textcolor{keywordflow}{if}(d<tmp-\/>data)}
+\DoxyCodeLine{239             tmp-\/>\mbox{\hyperlink{classnode_a7cbff55ff448f557223f79299056e9b1}{left}}=temp;}
+\DoxyCodeLine{240         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(d>=tmp-\/>\mbox{\hyperlink{classnode_a2d890bb9f6af0ffd73fe79b21124c2a2}{data}})}
+\DoxyCodeLine{241             tmp-\/>\mbox{\hyperlink{classnode_abdc86d4c8604c481752953af3235fc47}{right}}=temp;}
+\DoxyCodeLine{242     \}}
+\DoxyCodeLine{243     \mbox{\hyperlink{classBST_a07080573844039dc3e417a30877414a2}{size}}++; }
+\DoxyCodeLine{244 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classBST_a1bf7d5580b1bc2c9551f0a6cf4feeb5e}\label{classBST_a1bf7d5580b1bc2c9551f0a6cf4feeb5e}} 
+\index{BST@{BST}!root@{root}}
+\index{root@{root}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}}$\ast$ B\+S\+T\+::root}
+
+
+
+Definition at line 37 of file Q1.\+cpp.
+
+\mbox{\Hypertarget{classBST_a07080573844039dc3e417a30877414a2}\label{classBST_a07080573844039dc3e417a30877414a2}} 
+\index{BST@{BST}!size@{size}}
+\index{size@{size}!BST@{BST}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int B\+S\+T\+::size}
+
+
+
+Definition at line 38 of file Q1.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Q1_8cpp}{Q1.\+cpp}}\end{DoxyCompactItemize}

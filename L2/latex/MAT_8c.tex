@@ -1,0 +1,436 @@
+\hypertarget{MAT_8c}{}\doxysection{M\+A\+T.\+c File Reference}
+\label{MAT_8c}\index{MAT.c@{MAT.c}}
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structTree__node}{Tree\+\_\+node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \mbox{\hyperlink{structTree__node}{Tree\+\_\+node}} \mbox{\hyperlink{MAT_8c_a356b81611bcb8b357e89632e2132d311}{node}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{MAT_8c_afed33afd0dde3dd057b9f75fe75c291d}{get\+\_\+n}} ()
+\item 
+int $\ast$$\ast$ \mbox{\hyperlink{MAT_8c_a596f840154d2af0cefc4fc5d6ca7c377}{readfile}} (F\+I\+LE $\ast$f, int n, int c)
+\item 
+void \mbox{\hyperlink{MAT_8c_a4287ddf874f0c77044ae90fab07e2342}{generate}} (\mbox{\hyperlink{MAT_8c_a356b81611bcb8b357e89632e2132d311}{node}} $\ast$\mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}}, int x, int y, int size)
+\item 
+\mbox{\hyperlink{MAT_8c_a356b81611bcb8b357e89632e2132d311}{node}} $\ast$ \mbox{\hyperlink{MAT_8c_ade7606c1eedd58031020cbd0c39a250b}{create\+\_\+leaf}} (int size, int x, int y, int co)
+\begin{DoxyCompactList}\small\item\em A function that creates a leaf node and separately identifies it as a leaf node by assigning it a num. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{MAT_8c_a356b81611bcb8b357e89632e2132d311}{node}} $\ast$ \mbox{\hyperlink{MAT_8c_a4a7e8458364f3f44e6aaed93aad3a3d3}{create\+\_\+node}} ()
+\begin{DoxyCompactList}\small\item\em A function that creates a non-\/leaf node and separately identifies it by assigning it\textquotesingle{}s size to zero. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{MAT_8c_a49bb8c662842e4c8e688c544782ab384}{check\+\_\+array}} (int x, int y, int size)
+\item 
+void \mbox{\hyperlink{MAT_8c_a3e47c433486f295e531e38dff4c3cabb}{update\+\_\+matrix}} (int size, int x, int y, int co)
+\begin{DoxyCompactList}\small\item\em This function Updates a given region of the output array using the values that are required in the question. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{MAT_8c_a32abe0f0e9a9fad7495fc8d52a32e7fd}{out\+\_\+tree}} (\mbox{\hyperlink{MAT_8c_a356b81611bcb8b357e89632e2132d311}{node}} $\ast$current)
+\item 
+int \mbox{\hyperlink{MAT_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$$\ast$ \mbox{\hyperlink{MAT_8c_a08d5dd43347ae29fd27e1e66695dbea8}{a}}
+\begin{DoxyCompactList}\small\item\em Input Array Pointer. \end{DoxyCompactList}\item 
+int $\ast$$\ast$ \mbox{\hyperlink{MAT_8c_a3e72276ba700f52b6a95f9c85c613889}{out}}
+\begin{DoxyCompactList}\small\item\em Output Array Pointer. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{MAT_8c_a339d22b3e442946380f98ed19e320db2}{s}}
+\item 
+\mbox{\hyperlink{MAT_8c_a356b81611bcb8b357e89632e2132d311}{node}} $\ast$ \mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}} =N\+U\+LL
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{MAT_8c_a356b81611bcb8b357e89632e2132d311}\label{MAT_8c_a356b81611bcb8b357e89632e2132d311}} 
+\index{MAT.c@{MAT.c}!node@{node}}
+\index{node@{node}!MAT.c@{MAT.c}}
+\doxysubsubsection{\texorpdfstring{node}{node}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structTree__node}{Tree\+\_\+node}} \mbox{\hyperlink{MAT_8c_a356b81611bcb8b357e89632e2132d311}{node}}}
+
+
+
+Definition at line 7 of file M\+A\+T.\+c.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{MAT_8c_a49bb8c662842e4c8e688c544782ab384}\label{MAT_8c_a49bb8c662842e4c8e688c544782ab384}} 
+\index{MAT.c@{MAT.c}!check\_array@{check\_array}}
+\index{check\_array@{check\_array}!MAT.c@{MAT.c}}
+\doxysubsubsection{\texorpdfstring{check\_array()}{check\_array()}}
+{\footnotesize\ttfamily bool check\+\_\+array (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+This function checks whether a given region of the array has all values same or not using the current position int the array along with the size 
+
+Definition at line 62 of file M\+A\+T.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{63 \{}
+\DoxyCodeLine{64     \textcolor{keywordtype}{int} q=\mbox{\hyperlink{MAT_8c_a08d5dd43347ae29fd27e1e66695dbea8}{a}}[x][y];}
+\DoxyCodeLine{65         \textcolor{keywordtype}{int} lx=x+size-\/1;}
+\DoxyCodeLine{66         \textcolor{keywordtype}{int} ly=y+size-\/1;}
+\DoxyCodeLine{67     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=x;i<=lx;i++)}
+\DoxyCodeLine{68         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=y;j<=ly;j++)}
+\DoxyCodeLine{69             \textcolor{keywordflow}{if}(\mbox{\hyperlink{MAT_8c_a08d5dd43347ae29fd27e1e66695dbea8}{a}}[i][j]!=q)}
+\DoxyCodeLine{70                 \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{71     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{72 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{MAT_8c_ade7606c1eedd58031020cbd0c39a250b}\label{MAT_8c_ade7606c1eedd58031020cbd0c39a250b}} 
+\index{MAT.c@{MAT.c}!create\_leaf@{create\_leaf}}
+\index{create\_leaf@{create\_leaf}!MAT.c@{MAT.c}}
+\doxysubsubsection{\texorpdfstring{create\_leaf()}{create\_leaf()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{MAT_8c_a356b81611bcb8b357e89632e2132d311}{node}}$\ast$ create\+\_\+leaf (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{co }\end{DoxyParamCaption})}
+
+
+
+A function that creates a leaf node and separately identifies it as a leaf node by assigning it a num. 
+
+
+
+Definition at line 30 of file M\+A\+T.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{31 \{}
+\DoxyCodeLine{32         \mbox{\hyperlink{structTree__node}{node}}* temp = ( \mbox{\hyperlink{structTree__node}{node}} *)malloc(\textcolor{keyword}{sizeof}( \mbox{\hyperlink{structTree__node}{node}}));}
+\DoxyCodeLine{33     temp-\/>\mbox{\hyperlink{structTree__node_ae55cd473ce32e9b9312d42d69c7b55bf}{dig}}= \mbox{\hyperlink{MAT_8c_a08d5dd43347ae29fd27e1e66695dbea8}{a}}[x][y];}
+\DoxyCodeLine{34     temp-\/>\mbox{\hyperlink{structTree__node_a69a516b12838a60a0ed45450ce497bbb}{size}}= size;}
+\DoxyCodeLine{35     \textcolor{keywordtype}{int} \mbox{\hyperlink{inverseTranspose_8c_a0ddbf789cfd814565dd88748311c1c36}{d}}=0;}
+\DoxyCodeLine{36     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=size;i<=\mbox{\hyperlink{MAT_8c_a339d22b3e442946380f98ed19e320db2}{s}};i*=2)\mbox{\hyperlink{inverseTranspose_8c_a0ddbf789cfd814565dd88748311c1c36}{d}}++;}
+\DoxyCodeLine{37     printf(\textcolor{stringliteral}{"(\%d, \%d, \%d)\(\backslash\)n"},co,temp-\/>\mbox{\hyperlink{structTree__node_ae55cd473ce32e9b9312d42d69c7b55bf}{dig}},\mbox{\hyperlink{inverseTranspose_8c_a0ddbf789cfd814565dd88748311c1c36}{d}}-\/1); }
+\DoxyCodeLine{38     temp-\/>\mbox{\hyperlink{structTree__node_a53c4adc1bae7d2afaaab99a6fd3bd235}{num}}=co;}
+\DoxyCodeLine{39     temp-\/>\mbox{\hyperlink{structTree__node_af4ef1ff680f899a578c4bca35effe7e3}{nw}} = NULL;}
+\DoxyCodeLine{40     temp-\/>\mbox{\hyperlink{structTree__node_a56918eba424d848379a9c8e846206ba8}{ne}} = NULL;}
+\DoxyCodeLine{41     temp-\/>\mbox{\hyperlink{structTree__node_ad40aeca0bd023e2152e175db734c06b0}{sw}} = NULL; }
+\DoxyCodeLine{42     temp-\/>\mbox{\hyperlink{structTree__node_adfe1f5f5e36ada660cca4d8239c8193b}{se}} = NULL;}
+\DoxyCodeLine{43     \textcolor{keywordflow}{return} temp; }
+\DoxyCodeLine{44 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{MAT_8c_a4a7e8458364f3f44e6aaed93aad3a3d3}\label{MAT_8c_a4a7e8458364f3f44e6aaed93aad3a3d3}} 
+\index{MAT.c@{MAT.c}!create\_node@{create\_node}}
+\index{create\_node@{create\_node}!MAT.c@{MAT.c}}
+\doxysubsubsection{\texorpdfstring{create\_node()}{create\_node()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{MAT_8c_a356b81611bcb8b357e89632e2132d311}{node}}$\ast$ create\+\_\+node (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A function that creates a non-\/leaf node and separately identifies it by assigning it\textquotesingle{}s size to zero. 
+
+
+
+Definition at line 47 of file M\+A\+T.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{48 \{}
+\DoxyCodeLine{49     \mbox{\hyperlink{structTree__node}{node}}* temp = ( \mbox{\hyperlink{structTree__node}{node}} *)malloc(\textcolor{keyword}{sizeof}( \mbox{\hyperlink{structTree__node}{node}}));}
+\DoxyCodeLine{50     temp-\/>\mbox{\hyperlink{structTree__node_a69a516b12838a60a0ed45450ce497bbb}{size}} =0;}
+\DoxyCodeLine{51     temp-\/>\mbox{\hyperlink{structTree__node_ae55cd473ce32e9b9312d42d69c7b55bf}{dig}} =-\/1;}
+\DoxyCodeLine{52     temp-\/>\mbox{\hyperlink{structTree__node_af4ef1ff680f899a578c4bca35effe7e3}{nw}} = NULL;}
+\DoxyCodeLine{53     temp-\/>\mbox{\hyperlink{structTree__node_a56918eba424d848379a9c8e846206ba8}{ne}} = NULL;}
+\DoxyCodeLine{54     temp-\/>\mbox{\hyperlink{structTree__node_ad40aeca0bd023e2152e175db734c06b0}{sw}} = NULL; }
+\DoxyCodeLine{55     temp-\/>\mbox{\hyperlink{structTree__node_adfe1f5f5e36ada660cca4d8239c8193b}{se}} = NULL;}
+\DoxyCodeLine{56     \textcolor{keywordflow}{return} temp;}
+\DoxyCodeLine{57 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{MAT_8c_a4287ddf874f0c77044ae90fab07e2342}\label{MAT_8c_a4287ddf874f0c77044ae90fab07e2342}} 
+\index{MAT.c@{MAT.c}!generate@{generate}}
+\index{generate@{generate}!MAT.c@{MAT.c}}
+\doxysubsubsection{\texorpdfstring{generate()}{generate()}}
+{\footnotesize\ttfamily void generate (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{MAT_8c_a356b81611bcb8b357e89632e2132d311}{node}} $\ast$}]{root,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+The most important function which generates the tree from a given input array using the current position.\+We keep dividing the array into blocks of four and call the function recursively 
+
+Definition at line 88 of file M\+A\+T.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{89 \{}
+\DoxyCodeLine{90        \textcolor{keyword}{static} \textcolor{keywordtype}{int} count=0;       }
+\DoxyCodeLine{91        \textcolor{keywordflow}{if}(size==1)}
+\DoxyCodeLine{92     \{}
+\DoxyCodeLine{93             count++;}
+\DoxyCodeLine{94         \mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}}=\mbox{\hyperlink{MAT_8c_ade7606c1eedd58031020cbd0c39a250b}{create\_leaf}}(size,x,y,count);}
+\DoxyCodeLine{95         \mbox{\hyperlink{MAT_8c_a3e47c433486f295e531e38dff4c3cabb}{update\_matrix}}(size,x,y,count);}
+\DoxyCodeLine{96         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{97     \}}
+\DoxyCodeLine{98     \textcolor{keywordflow}{if}(\mbox{\hyperlink{MAT_8c_a49bb8c662842e4c8e688c544782ab384}{check\_array}}(x,y,size))}
+\DoxyCodeLine{99     \{}
+\DoxyCodeLine{100             count++;}
+\DoxyCodeLine{101             \mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}}=\mbox{\hyperlink{MAT_8c_ade7606c1eedd58031020cbd0c39a250b}{create\_leaf}}(size,x,y,count);}
+\DoxyCodeLine{102             \mbox{\hyperlink{MAT_8c_a3e47c433486f295e531e38dff4c3cabb}{update\_matrix}}(size,x,y,count);}
+\DoxyCodeLine{103         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{104     \} }
+\DoxyCodeLine{105     \mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}}-\/>\mbox{\hyperlink{structTree__node_af4ef1ff680f899a578c4bca35effe7e3}{nw}}=\mbox{\hyperlink{MAT_8c_a4a7e8458364f3f44e6aaed93aad3a3d3}{create\_node}}();}
+\DoxyCodeLine{106     \mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}}-\/>\mbox{\hyperlink{structTree__node_a56918eba424d848379a9c8e846206ba8}{ne}}=\mbox{\hyperlink{MAT_8c_a4a7e8458364f3f44e6aaed93aad3a3d3}{create\_node}}();}
+\DoxyCodeLine{107     \mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}}-\/>\mbox{\hyperlink{structTree__node_ad40aeca0bd023e2152e175db734c06b0}{sw}}=\mbox{\hyperlink{MAT_8c_a4a7e8458364f3f44e6aaed93aad3a3d3}{create\_node}}();}
+\DoxyCodeLine{108     \mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}}-\/>\mbox{\hyperlink{structTree__node_adfe1f5f5e36ada660cca4d8239c8193b}{se}}=\mbox{\hyperlink{MAT_8c_a4a7e8458364f3f44e6aaed93aad3a3d3}{create\_node}}();}
+\DoxyCodeLine{109     \mbox{\hyperlink{MAT_8c_a4287ddf874f0c77044ae90fab07e2342}{generate}}(\mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}}-\/>\mbox{\hyperlink{structTree__node_af4ef1ff680f899a578c4bca35effe7e3}{nw}},x,y,size/2);}
+\DoxyCodeLine{110 }
+\DoxyCodeLine{111     \mbox{\hyperlink{MAT_8c_a4287ddf874f0c77044ae90fab07e2342}{generate}}(\mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}}-\/>\mbox{\hyperlink{structTree__node_a56918eba424d848379a9c8e846206ba8}{ne}},x,(y+size/2),size/2);}
+\DoxyCodeLine{112 }
+\DoxyCodeLine{113     \mbox{\hyperlink{MAT_8c_a4287ddf874f0c77044ae90fab07e2342}{generate}}(\mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}}-\/>\mbox{\hyperlink{structTree__node_ad40aeca0bd023e2152e175db734c06b0}{sw}},(x+size/2),y,size/2);}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115     \mbox{\hyperlink{MAT_8c_a4287ddf874f0c77044ae90fab07e2342}{generate}}(\mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}}-\/>\mbox{\hyperlink{structTree__node_adfe1f5f5e36ada660cca4d8239c8193b}{se}},x+ size/2,y + size/2,size/2);}
+\DoxyCodeLine{116 }
+\DoxyCodeLine{117 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{MAT_8c_afed33afd0dde3dd057b9f75fe75c291d}\label{MAT_8c_afed33afd0dde3dd057b9f75fe75c291d}} 
+\index{MAT.c@{MAT.c}!get\_n@{get\_n}}
+\index{get\_n@{get\_n}!MAT.c@{MAT.c}}
+\doxysubsubsection{\texorpdfstring{get\_n()}{get\_n()}}
+{\footnotesize\ttfamily int get\+\_\+n (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A function to count the no of rows in the file by basically counting the no of nextline characters using the getc() function 
+
+Definition at line 219 of file M\+A\+T.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{220 \{}
+\DoxyCodeLine{221     \textcolor{keywordtype}{int} count\_lines = 0;}
+\DoxyCodeLine{222     \textcolor{keywordtype}{char} chr;}
+\DoxyCodeLine{223     \textcolor{comment}{//extract character from file and store in chr}}
+\DoxyCodeLine{224     FILE *fileptr=fopen(\textcolor{stringliteral}{"inputSample.txt"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{225     \textcolor{keywordflow}{if}(!fileptr)}
+\DoxyCodeLine{226     \{printf(\textcolor{stringliteral}{"error in opening the file"});}
+\DoxyCodeLine{227         \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{228     \}}
+\DoxyCodeLine{229     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{230     \{    }
+\DoxyCodeLine{231         chr = getc(fileptr);}
+\DoxyCodeLine{232         \textcolor{keywordflow}{while} (chr != EOF)}
+\DoxyCodeLine{233         \{}
+\DoxyCodeLine{234             \textcolor{comment}{//Count whenever new line is encountered}}
+\DoxyCodeLine{235             \textcolor{keywordflow}{if} (chr == \textcolor{charliteral}{'\(\backslash\)n'})}
+\DoxyCodeLine{236             \{}
+\DoxyCodeLine{237                 count\_lines = count\_lines + 1;}
+\DoxyCodeLine{238             \}}
+\DoxyCodeLine{239             \textcolor{comment}{//take next character from file.}}
+\DoxyCodeLine{240             chr = getc(fileptr);}
+\DoxyCodeLine{241         \}}
+\DoxyCodeLine{242         fclose(fileptr); \textcolor{comment}{//close file.}}
+\DoxyCodeLine{243     \}}
+\DoxyCodeLine{244     \textcolor{keywordflow}{return} count\_lines;}
+\DoxyCodeLine{245 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{MAT_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{MAT_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{MAT.c@{MAT.c}!main@{main}}
+\index{main@{main}!MAT.c@{MAT.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+The function that controls the execution of the entire program 
+
+Definition at line 141 of file M\+A\+T.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{142 \{}
+\DoxyCodeLine{143        \textcolor{keywordtype}{double} time\_spent = 0.0;}
+\DoxyCodeLine{144     clock\_t begin = clock();}
+\DoxyCodeLine{145      }
+\DoxyCodeLine{146 }
+\DoxyCodeLine{147         FILE *f=fopen(\textcolor{stringliteral}{"inputSample.txt"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{148     \textcolor{keywordtype}{int} n = \mbox{\hyperlink{MAT_8c_afed33afd0dde3dd057b9f75fe75c291d}{get\_n}}();}
+\DoxyCodeLine{149     \textcolor{keywordtype}{int} c =n;}
+\DoxyCodeLine{150         \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{151         \textcolor{keywordflow}{for}(i=1;i<c;i*=2);}
+\DoxyCodeLine{152         \textcolor{keywordflow}{for}(;c<i;c++);}
+\DoxyCodeLine{153          \mbox{\hyperlink{MAT_8c_a339d22b3e442946380f98ed19e320db2}{s}}=c;  }
+\DoxyCodeLine{154         printf(\textcolor{stringliteral}{"\%d\(\backslash\)n"},n); }
+\DoxyCodeLine{155     printf(\textcolor{stringliteral}{"\%d\(\backslash\)n"},c);}
+\DoxyCodeLine{156     \mbox{\hyperlink{MAT_8c_a08d5dd43347ae29fd27e1e66695dbea8}{a}}=\mbox{\hyperlink{MAT_8c_a596f840154d2af0cefc4fc5d6ca7c377}{readfile}}(f,n,c);}
+\DoxyCodeLine{157     \mbox{\hyperlink{MAT_8c_a3e72276ba700f52b6a95f9c85c613889}{out}}=(\textcolor{keywordtype}{int} **)calloc(c,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}*));}
+\DoxyCodeLine{158     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i= 0; i < c; i++)}
+\DoxyCodeLine{159         \mbox{\hyperlink{MAT_8c_a3e72276ba700f52b6a95f9c85c613889}{out}}[i]=(\textcolor{keywordtype}{int}*)calloc(c,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}*));}
+\DoxyCodeLine{160                    }
+\DoxyCodeLine{161     \mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}} = ( \mbox{\hyperlink{structTree__node}{node}} *)malloc(\textcolor{keyword}{sizeof}( \mbox{\hyperlink{structTree__node}{node}}));}
+\DoxyCodeLine{162     \mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}}-\/>\mbox{\hyperlink{structTree__node_af4ef1ff680f899a578c4bca35effe7e3}{nw}} = NULL;}
+\DoxyCodeLine{163     \mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}}-\/>\mbox{\hyperlink{structTree__node_a56918eba424d848379a9c8e846206ba8}{ne}} = NULL;}
+\DoxyCodeLine{164     \mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}}-\/>\mbox{\hyperlink{structTree__node_ad40aeca0bd023e2152e175db734c06b0}{sw}} = NULL; }
+\DoxyCodeLine{165     \mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}}-\/>\mbox{\hyperlink{structTree__node_adfe1f5f5e36ada660cca4d8239c8193b}{se}} = NULL;}
+\DoxyCodeLine{166     \mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}}-\/>\mbox{\hyperlink{structTree__node_a69a516b12838a60a0ed45450ce497bbb}{size}}=0;}
+\DoxyCodeLine{167     \mbox{\hyperlink{structTree__node}{node}} *head=(\mbox{\hyperlink{structTree__node}{node}} *)malloc(\textcolor{keyword}{sizeof}( \mbox{\hyperlink{structTree__node}{node}}));}
+\DoxyCodeLine{168     head=\mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}};}
+\DoxyCodeLine{169     \mbox{\hyperlink{MAT_8c_a4287ddf874f0c77044ae90fab07e2342}{generate}}(\mbox{\hyperlink{MAT_8c_aa570215f2f913275d6ff0d586e436d21}{root}},0,0,c);}
+\DoxyCodeLine{170     \mbox{\hyperlink{MAT_8c_a32abe0f0e9a9fad7495fc8d52a32e7fd}{out\_tree}}(head);}
+\DoxyCodeLine{171         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<c;i++)}
+\DoxyCodeLine{172     \{}
+\DoxyCodeLine{173         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<c;j++)}
+\DoxyCodeLine{174             printf(\textcolor{stringliteral}{"\%d  "},\mbox{\hyperlink{MAT_8c_a3e72276ba700f52b6a95f9c85c613889}{out}}[i][j]);}
+\DoxyCodeLine{175      printf(\textcolor{stringliteral}{"\(\backslash\)n"});}
+\DoxyCodeLine{176         \}}
+\DoxyCodeLine{177         }
+\DoxyCodeLine{178         }
+\DoxyCodeLine{179         clock\_t end = clock();}
+\DoxyCodeLine{180         time\_spent += (double)(end -\/ begin) / CLOCKS\_PER\_SEC;}
+\DoxyCodeLine{181 }
+\DoxyCodeLine{182     printf(\textcolor{stringliteral}{"Time elpased is \%f seconds"}, time\_spent);}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{184     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{185       }
+\DoxyCodeLine{186 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{MAT_8c_a32abe0f0e9a9fad7495fc8d52a32e7fd}\label{MAT_8c_a32abe0f0e9a9fad7495fc8d52a32e7fd}} 
+\index{MAT.c@{MAT.c}!out\_tree@{out\_tree}}
+\index{out\_tree@{out\_tree}!MAT.c@{MAT.c}}
+\doxysubsubsection{\texorpdfstring{out\_tree()}{out\_tree()}}
+{\footnotesize\ttfamily void out\+\_\+tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{MAT_8c_a356b81611bcb8b357e89632e2132d311}{node}} $\ast$}]{current }\end{DoxyParamCaption})}
+
+It displays the output in a post order manner 
+
+Definition at line 121 of file M\+A\+T.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{122 \{}
+\DoxyCodeLine{123  \textcolor{keyword}{static} \textcolor{keywordtype}{int} depth=0;}
+\DoxyCodeLine{124  \textcolor{keywordflow}{if}(!current)}
+\DoxyCodeLine{125    \{depth-\/-\/;}
+\DoxyCodeLine{126    \textcolor{keywordflow}{return};\}}
+\DoxyCodeLine{127    depth++;}
+\DoxyCodeLine{128    \mbox{\hyperlink{MAT_8c_a32abe0f0e9a9fad7495fc8d52a32e7fd}{out\_tree}}(current-\/>\mbox{\hyperlink{structTree__node_af4ef1ff680f899a578c4bca35effe7e3}{nw}});}
+\DoxyCodeLine{129    depth++;}
+\DoxyCodeLine{130    \mbox{\hyperlink{MAT_8c_a32abe0f0e9a9fad7495fc8d52a32e7fd}{out\_tree}}(current-\/>\mbox{\hyperlink{structTree__node_a56918eba424d848379a9c8e846206ba8}{ne}});}
+\DoxyCodeLine{131    depth++;}
+\DoxyCodeLine{132    \mbox{\hyperlink{MAT_8c_a32abe0f0e9a9fad7495fc8d52a32e7fd}{out\_tree}}(current-\/>\mbox{\hyperlink{structTree__node_ad40aeca0bd023e2152e175db734c06b0}{sw}});}
+\DoxyCodeLine{133    depth++;}
+\DoxyCodeLine{134    \mbox{\hyperlink{MAT_8c_a32abe0f0e9a9fad7495fc8d52a32e7fd}{out\_tree}}(current-\/>\mbox{\hyperlink{structTree__node_adfe1f5f5e36ada660cca4d8239c8193b}{se}});}
+\DoxyCodeLine{135    \textcolor{keywordflow}{if}(current-\/>\mbox{\hyperlink{structTree__node_a69a516b12838a60a0ed45450ce497bbb}{size}}!=0)}
+\DoxyCodeLine{136       printf(\textcolor{stringliteral}{"(\%d, \%d, \%d)"},current-\/>\mbox{\hyperlink{structTree__node_a53c4adc1bae7d2afaaab99a6fd3bd235}{num}},current-\/>\mbox{\hyperlink{structTree__node_ae55cd473ce32e9b9312d42d69c7b55bf}{dig}},depth);}
+\DoxyCodeLine{137 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{MAT_8c_a596f840154d2af0cefc4fc5d6ca7c377}\label{MAT_8c_a596f840154d2af0cefc4fc5d6ca7c377}} 
+\index{MAT.c@{MAT.c}!readfile@{readfile}}
+\index{readfile@{readfile}!MAT.c@{MAT.c}}
+\doxysubsubsection{\texorpdfstring{readfile()}{readfile()}}
+{\footnotesize\ttfamily int $\ast$$\ast$ readfile (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f,  }\item[{int}]{n,  }\item[{int}]{c }\end{DoxyParamCaption})}
+
+Reads data from the file and stores a matrix at the south west corner if its size is not a power of two 
+
+Definition at line 191 of file M\+A\+T.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{192 \{    }
+\DoxyCodeLine{193     \textcolor{keywordflow}{if}(!f)}
+\DoxyCodeLine{194     \{printf(\textcolor{stringliteral}{"error in opening the file"});}
+\DoxyCodeLine{195         fclose(f);         }
+\DoxyCodeLine{196     \}}
+\DoxyCodeLine{197     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{198     \{}
+\DoxyCodeLine{199         \textcolor{keywordtype}{int} **arr=(\textcolor{keywordtype}{int} **)calloc(c,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}*));}
+\DoxyCodeLine{200         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i= 0; i < c; i++)}
+\DoxyCodeLine{201             arr[i]=(\textcolor{keywordtype}{int}*)calloc(c,\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}*));}
+\DoxyCodeLine{202 }
+\DoxyCodeLine{203         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<c;i++)}
+\DoxyCodeLine{204         \{}
+\DoxyCodeLine{205             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<c;j++)}
+\DoxyCodeLine{206                 \textcolor{keywordflow}{if}(j==n-\/1 \&\& i>=c-\/n \&\& j>=c-\/n) }
+\DoxyCodeLine{207                     fscanf(f,\textcolor{stringliteral}{"\%d/n"} ,\&arr[i][j]);}
+\DoxyCodeLine{208                 \textcolor{keywordflow}{else} \textcolor{keywordflow}{if} (i>=c-\/n\&\&j>=c-\/n)}
+\DoxyCodeLine{209                     fscanf(f,\textcolor{stringliteral}{"\%d "} ,\&arr[i][j]);   }
+\DoxyCodeLine{210         \}}
+\DoxyCodeLine{211 }
+\DoxyCodeLine{212         fclose(f);}
+\DoxyCodeLine{213         \textcolor{keywordflow}{return}(arr);}
+\DoxyCodeLine{214     \}}
+\DoxyCodeLine{215 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{MAT_8c_a3e47c433486f295e531e38dff4c3cabb}\label{MAT_8c_a3e47c433486f295e531e38dff4c3cabb}} 
+\index{MAT.c@{MAT.c}!update\_matrix@{update\_matrix}}
+\index{update\_matrix@{update\_matrix}!MAT.c@{MAT.c}}
+\doxysubsubsection{\texorpdfstring{update\_matrix()}{update\_matrix()}}
+{\footnotesize\ttfamily void update\+\_\+matrix (\begin{DoxyParamCaption}\item[{int}]{size,  }\item[{int}]{x,  }\item[{int}]{y,  }\item[{int}]{co }\end{DoxyParamCaption})}
+
+
+
+This function Updates a given region of the output array using the values that are required in the question. 
+
+
+
+Definition at line 76 of file M\+A\+T.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{77 \{}
+\DoxyCodeLine{78         \textcolor{keywordtype}{int} lx=x+size-\/1;}
+\DoxyCodeLine{79         \textcolor{keywordtype}{int} ly=y+size-\/1;}
+\DoxyCodeLine{80     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=x;i<=lx;i++)}
+\DoxyCodeLine{81         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=y;j<=ly;j++)}
+\DoxyCodeLine{82             \mbox{\hyperlink{MAT_8c_a3e72276ba700f52b6a95f9c85c613889}{out}}[i][j]=co;}
+\DoxyCodeLine{83 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{MAT_8c_a08d5dd43347ae29fd27e1e66695dbea8}\label{MAT_8c_a08d5dd43347ae29fd27e1e66695dbea8}} 
+\index{MAT.c@{MAT.c}!a@{a}}
+\index{a@{a}!MAT.c@{MAT.c}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily int$\ast$$\ast$ a}
+
+
+
+Input Array Pointer. 
+
+
+
+Definition at line 9 of file M\+A\+T.\+c.
+
+\mbox{\Hypertarget{MAT_8c_a3e72276ba700f52b6a95f9c85c613889}\label{MAT_8c_a3e72276ba700f52b6a95f9c85c613889}} 
+\index{MAT.c@{MAT.c}!out@{out}}
+\index{out@{out}!MAT.c@{MAT.c}}
+\doxysubsubsection{\texorpdfstring{out}{out}}
+{\footnotesize\ttfamily int$\ast$$\ast$ out}
+
+
+
+Output Array Pointer. 
+
+
+
+Definition at line 11 of file M\+A\+T.\+c.
+
+\mbox{\Hypertarget{MAT_8c_aa570215f2f913275d6ff0d586e436d21}\label{MAT_8c_aa570215f2f913275d6ff0d586e436d21}} 
+\index{MAT.c@{MAT.c}!root@{root}}
+\index{root@{root}!MAT.c@{MAT.c}}
+\doxysubsubsection{\texorpdfstring{root}{root}}
+{\footnotesize\ttfamily \mbox{\hyperlink{MAT_8c_a356b81611bcb8b357e89632e2132d311}{node}}$\ast$ root =N\+U\+LL}
+
+
+
+Definition at line 27 of file M\+A\+T.\+c.
+
+\mbox{\Hypertarget{MAT_8c_a339d22b3e442946380f98ed19e320db2}\label{MAT_8c_a339d22b3e442946380f98ed19e320db2}} 
+\index{MAT.c@{MAT.c}!s@{s}}
+\index{s@{s}!MAT.c@{MAT.c}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily int s}
+
+
+
+Definition at line 12 of file M\+A\+T.\+c.
+

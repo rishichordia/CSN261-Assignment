@@ -1,0 +1,509 @@
+\hypertarget{q3_8c}{}\doxysection{q3.\+c File Reference}
+\label{q3_8c}\index{q3.c@{q3.c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{q3_8c_a2c464c1d8450f746b58a8209ff656b2f}{getrow}} ()
+\item 
+int \mbox{\hyperlink{q3_8c_a3e6c9652642794a415206b896d224762}{getcolumn}} ()
+\begin{DoxyCompactList}\small\item\em used to find the no of rows in the file \end{DoxyCompactList}\item 
+int $\ast$$\ast$ \mbox{\hyperlink{q3_8c_ad9bde1c31a74a9b5dc9ea3531dfc70d8}{readfile}} (F\+I\+LE $\ast$)
+\begin{DoxyCompactList}\small\item\em used to find the no of columns in the file \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{q3_8c_a66e93f3d6145d7f66fbad8faba1f6cec}{pixel\+Value}} (int x, int y)
+\item 
+void \mbox{\hyperlink{q3_8c_aae93e07f01016bdcc2e55a32b45175d4}{displayfile}} (int $\ast$$\ast$arr)
+\item 
+void \mbox{\hyperlink{q3_8c_a20e62c8b3afc6f174b695f8e5a402c9f}{removered}} ()
+\item 
+void \mbox{\hyperlink{q3_8c_a962ddf53446d77f331993f8f926f1605}{removegreen}} ()
+\item 
+void \mbox{\hyperlink{q3_8c_aa7d479cc35251fa7a76844527855dd1e}{removeblue}} ()
+\item 
+void \mbox{\hyperlink{q3_8c_af9393dcdbcdf45db26c0379ab29cdfa9}{red\+Only}} ()
+\item 
+void \mbox{\hyperlink{q3_8c_ab41f190053202d0dace818e7bf2b3baa}{blue\+Only}} ()
+\item 
+void \mbox{\hyperlink{q3_8c_ad1543fdc021f2c0b48bf978ca970b4c4}{green\+Only}} ()
+\item 
+int \mbox{\hyperlink{q3_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$$\ast$ \mbox{\hyperlink{q3_8c_afbc02cfe334c856f935a9b88e06ff10c}{r}}
+\item 
+int $\ast$$\ast$ \mbox{\hyperlink{q3_8c_ab7058cc6e0cec6bdca362a11969375d0}{g}}
+\begin{DoxyCompactList}\small\item\em A dynamic array stores the address of the array that stores the pixel value of red. \end{DoxyCompactList}\item 
+int $\ast$$\ast$ \mbox{\hyperlink{q3_8c_ae64f53180b5d41e1fbe03fef85cf0b04}{b}}
+\begin{DoxyCompactList}\small\item\em A dynamic array stores the address of the array that stores the pixel value of green. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{q3_8c_af1d3cff2e4538e23400e260bae3dadad}{row}}
+\begin{DoxyCompactList}\small\item\em A dynamic array stores the address of the array that stores the pixel value of blue. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{q3_8c_afb52e720f5f0c483db5861f9e42e924e}{col}}
+\begin{DoxyCompactList}\small\item\em used to store the no of rows in the file \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{q3_8c_a339d22b3e442946380f98ed19e320db2}{s}}
+\begin{DoxyCompactList}\small\item\em used to store the no of columns in the file \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{q3_8c_ab41f190053202d0dace818e7bf2b3baa}\label{q3_8c_ab41f190053202d0dace818e7bf2b3baa}} 
+\index{q3.c@{q3.c}!blueOnly@{blueOnly}}
+\index{blueOnly@{blueOnly}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{blueOnly()}{blueOnly()}}
+{\footnotesize\ttfamily void blue\+Only (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+It preserves the blue colour by removing the green and the red shades first green is removed then red and again green has to be removed to make sure that no green was remaining after removing red 
+
+Definition at line 93 of file q3.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{94 \{}
+\DoxyCodeLine{95   \mbox{\hyperlink{q3_8c_a962ddf53446d77f331993f8f926f1605}{removegreen}}();}
+\DoxyCodeLine{96   \mbox{\hyperlink{q3_8c_a20e62c8b3afc6f174b695f8e5a402c9f}{removered}}();}
+\DoxyCodeLine{97    \mbox{\hyperlink{q3_8c_a962ddf53446d77f331993f8f926f1605}{removegreen}}();}
+\DoxyCodeLine{98 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{q3_8c_aae93e07f01016bdcc2e55a32b45175d4}\label{q3_8c_aae93e07f01016bdcc2e55a32b45175d4}} 
+\index{q3.c@{q3.c}!displayfile@{displayfile}}
+\index{displayfile@{displayfile}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{displayfile()}{displayfile()}}
+{\footnotesize\ttfamily void displayfile (\begin{DoxyParamCaption}\item[{int $\ast$$\ast$}]{arr }\end{DoxyParamCaption})}
+
+takes the address of the 2d array and displays it on the terminal 
+
+Definition at line 26 of file q3.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{27 \{}
+\DoxyCodeLine{28  \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\mbox{\hyperlink{q3_8c_af1d3cff2e4538e23400e260bae3dadad}{row}};i++)}
+\DoxyCodeLine{29                     \{}
+\DoxyCodeLine{30                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<\mbox{\hyperlink{q3_8c_afb52e720f5f0c483db5861f9e42e924e}{col}};j++)}
+\DoxyCodeLine{31                       \{ printf(\textcolor{stringliteral}{"\%d "} ,arr[i][j]);\}}
+\DoxyCodeLine{32                      printf(\textcolor{stringliteral}{"\(\backslash\)n"});}
+\DoxyCodeLine{33                     \}}
+\DoxyCodeLine{34                         }
+\DoxyCodeLine{35        \textcolor{comment}{// write\_output();}}
+\DoxyCodeLine{36 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{q3_8c_a3e6c9652642794a415206b896d224762}\label{q3_8c_a3e6c9652642794a415206b896d224762}} 
+\index{q3.c@{q3.c}!getcolumn@{getcolumn}}
+\index{getcolumn@{getcolumn}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{getcolumn()}{getcolumn()}}
+{\footnotesize\ttfamily int getcolumn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+used to find the no of rows in the file 
+
+A function to count the no of cols in the file by basically counting the no of characters in a single line using the getc() function and fscanf ,terminating when ~\newline
+ is encountered 
+
+Definition at line 243 of file q3.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{244 \{}
+\DoxyCodeLine{245   FILE *f=fopen(\textcolor{stringliteral}{"Q3\_ip\_Red.dat"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{246   \textcolor{keywordflow}{if}(!f)}
+\DoxyCodeLine{247     \{printf(\textcolor{stringliteral}{"error in opening the file"});}
+\DoxyCodeLine{248     \textcolor{keywordflow}{return} -\/1;\}}
+\DoxyCodeLine{249     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{250     \{}
+\DoxyCodeLine{251   \textcolor{keywordtype}{int} count=1;}
+\DoxyCodeLine{252   \textcolor{keywordtype}{char} c;}
+\DoxyCodeLine{253    c=getc(f);}
+\DoxyCodeLine{254   \textcolor{keywordflow}{do} \{}
+\DoxyCodeLine{255    \textcolor{keywordflow}{if}(c==\textcolor{charliteral}{','})}
+\DoxyCodeLine{256    count++;}
+\DoxyCodeLine{257    c=getc(f);}
+\DoxyCodeLine{258 \}}
+\DoxyCodeLine{259    \textcolor{keywordflow}{while}( c!=\textcolor{charliteral}{'\(\backslash\)n'});}
+\DoxyCodeLine{260 fclose(f);}
+\DoxyCodeLine{261  \textcolor{keywordflow}{return} count;}
+\DoxyCodeLine{262 \}\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{q3_8c_a2c464c1d8450f746b58a8209ff656b2f}\label{q3_8c_a2c464c1d8450f746b58a8209ff656b2f}} 
+\index{q3.c@{q3.c}!getrow@{getrow}}
+\index{getrow@{getrow}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{getrow()}{getrow()}}
+{\footnotesize\ttfamily int getrow (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A function to count the no of rows in the file by basically counting the no of nextline characters using the getc() function 
+
+Definition at line 213 of file q3.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{214 \{}
+\DoxyCodeLine{215    \textcolor{keywordtype}{int} count\_lines = 0;}
+\DoxyCodeLine{216    \textcolor{keywordtype}{char} chr;}
+\DoxyCodeLine{217    \textcolor{comment}{//extract character from file and store in chr}}
+\DoxyCodeLine{218    FILE *fileptr=fopen(\textcolor{stringliteral}{"Q3\_ip\_Red.dat"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{219    \textcolor{keywordflow}{if}(!fileptr)}
+\DoxyCodeLine{220     \{printf(\textcolor{stringliteral}{"error in opening the file"});}
+\DoxyCodeLine{221          \textcolor{keywordflow}{return} -\/1;}
+\DoxyCodeLine{222     \}}
+\DoxyCodeLine{223     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{224     \{    }
+\DoxyCodeLine{225    chr = getc(fileptr);}
+\DoxyCodeLine{226     \textcolor{keywordflow}{while} (chr != EOF)}
+\DoxyCodeLine{227     \{}
+\DoxyCodeLine{228         \textcolor{comment}{//Count whenever new line is encountered}}
+\DoxyCodeLine{229         \textcolor{keywordflow}{if} (chr == \textcolor{charliteral}{'\(\backslash\)n'})}
+\DoxyCodeLine{230         \{}
+\DoxyCodeLine{231             count\_lines = count\_lines + 1;}
+\DoxyCodeLine{232         \}}
+\DoxyCodeLine{233         \textcolor{comment}{//take next character from file.}}
+\DoxyCodeLine{234         chr = getc(fileptr);}
+\DoxyCodeLine{235     \}}
+\DoxyCodeLine{236     fclose(fileptr); \textcolor{comment}{//close file.}}
+\DoxyCodeLine{237     \}}
+\DoxyCodeLine{238    \textcolor{keywordflow}{return} count\_lines;}
+\DoxyCodeLine{239     }
+\DoxyCodeLine{240 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{q3_8c_ad1543fdc021f2c0b48bf978ca970b4c4}\label{q3_8c_ad1543fdc021f2c0b48bf978ca970b4c4}} 
+\index{q3.c@{q3.c}!greenOnly@{greenOnly}}
+\index{greenOnly@{greenOnly}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{greenOnly()}{greenOnly()}}
+{\footnotesize\ttfamily void green\+Only (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+It preserves the green colour by removing the red and the blue shades first red is removed then blue and again red has to be removed to make sure that no red was remaining after removing blue 
+
+Definition at line 103 of file q3.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{104 \{}
+\DoxyCodeLine{105   \mbox{\hyperlink{q3_8c_a20e62c8b3afc6f174b695f8e5a402c9f}{removered}}();}
+\DoxyCodeLine{106   \mbox{\hyperlink{q3_8c_aa7d479cc35251fa7a76844527855dd1e}{removeblue}}();}
+\DoxyCodeLine{107   \mbox{\hyperlink{q3_8c_a20e62c8b3afc6f174b695f8e5a402c9f}{removered}}();}
+\DoxyCodeLine{108 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{q3_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{q3_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{q3.c@{q3.c}!main@{main}}
+\index{main@{main}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Provides a easy interface for the user to use the various functions in the program 
+
+Definition at line 111 of file q3.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{112 \{      \textcolor{keywordtype}{int} get=0;}
+\DoxyCodeLine{113         \mbox{\hyperlink{q3_8c_af1d3cff2e4538e23400e260bae3dadad}{row}}=\mbox{\hyperlink{q3_8c_a2c464c1d8450f746b58a8209ff656b2f}{getrow}}();}
+\DoxyCodeLine{114         \mbox{\hyperlink{q3_8c_afb52e720f5f0c483db5861f9e42e924e}{col}}=\mbox{\hyperlink{q3_8c_a3e6c9652642794a415206b896d224762}{getcolumn}}();}
+\DoxyCodeLine{115         \mbox{\hyperlink{q3_8c_a339d22b3e442946380f98ed19e320db2}{s}}=\mbox{\hyperlink{q3_8c_af1d3cff2e4538e23400e260bae3dadad}{row}}*\mbox{\hyperlink{q3_8c_afb52e720f5f0c483db5861f9e42e924e}{col}};}
+\DoxyCodeLine{116         \textcolor{keywordflow}{while}(\textcolor{keyword}{true})}
+\DoxyCodeLine{117         \{FILE *red=fopen(\textcolor{stringliteral}{"Q3\_ip\_Red.dat"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{118         FILE *green=fopen(\textcolor{stringliteral}{"Q3\_ip\_Green.dat"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{119         FILE *blue=fopen(\textcolor{stringliteral}{"Q3\_ip\_Blue.dat"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{120         \mbox{\hyperlink{q3_8c_afbc02cfe334c856f935a9b88e06ff10c}{r}}=\mbox{\hyperlink{q3_8c_ad9bde1c31a74a9b5dc9ea3531dfc70d8}{readfile}}(red);}
+\DoxyCodeLine{121         \mbox{\hyperlink{q3_8c_ab7058cc6e0cec6bdca362a11969375d0}{g}}=\mbox{\hyperlink{q3_8c_ad9bde1c31a74a9b5dc9ea3531dfc70d8}{readfile}}(green);}
+\DoxyCodeLine{122         \mbox{\hyperlink{q3_8c_ae64f53180b5d41e1fbe03fef85cf0b04}{b}}=\mbox{\hyperlink{q3_8c_ad9bde1c31a74a9b5dc9ea3531dfc70d8}{readfile}}(blue);}
+\DoxyCodeLine{123         printf(\textcolor{stringliteral}{"Choose an operation\(\backslash\)n"});}
+\DoxyCodeLine{124         printf(\textcolor{stringliteral}{"Enter 1 to remove redshades\(\backslash\)n"});}
+\DoxyCodeLine{125         printf(\textcolor{stringliteral}{"Enter 2 to remove greenshades\(\backslash\)n"});}
+\DoxyCodeLine{126         printf(\textcolor{stringliteral}{"Enter 3 to remove blueshades\(\backslash\)n"});}
+\DoxyCodeLine{127         printf(\textcolor{stringliteral}{"Enter 4 to preserve redshade\(\backslash\)n"});}
+\DoxyCodeLine{128         printf(\textcolor{stringliteral}{"Enter 5 to preserve blueshade\(\backslash\)n"});}
+\DoxyCodeLine{129         printf(\textcolor{stringliteral}{"Enter 6 to preserve greenshade\(\backslash\)n"});}
+\DoxyCodeLine{130         printf(\textcolor{stringliteral}{"Enter 0 to exit\(\backslash\)n"});}
+\DoxyCodeLine{131         scanf(\textcolor{stringliteral}{"\%d"},\&get);}
+\DoxyCodeLine{132         \textcolor{keywordflow}{if}(get==0)}
+\DoxyCodeLine{133          \textcolor{keywordflow}{break};}
+\DoxyCodeLine{134         \textcolor{keywordtype}{int} x,y;}
+\DoxyCodeLine{135         \textcolor{keywordflow}{switch}(get)}
+\DoxyCodeLine{136         \{}
+\DoxyCodeLine{137         \textcolor{keywordflow}{case} 0:printf(\textcolor{stringliteral}{"Exit Thank you"});}
+\DoxyCodeLine{138                \textcolor{keywordflow}{break};}
+\DoxyCodeLine{139         \textcolor{keywordflow}{case} 1:}
+\DoxyCodeLine{140                 \mbox{\hyperlink{q3_8c_a20e62c8b3afc6f174b695f8e5a402c9f}{removered}}();}
+\DoxyCodeLine{141                 printf(\textcolor{stringliteral}{"The red shade has been removed . To check pixel value enter x<953 and y<1268\(\backslash\)n"});}
+\DoxyCodeLine{142                 scanf(\textcolor{stringliteral}{" \%d \%d"},\&x,\&y);}
+\DoxyCodeLine{143                 \mbox{\hyperlink{q3_8c_a66e93f3d6145d7f66fbad8faba1f6cec}{pixelValue}}(x,y);}
+\DoxyCodeLine{144                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{145         \textcolor{keywordflow}{case} 2:}
+\DoxyCodeLine{146                 \mbox{\hyperlink{q3_8c_a962ddf53446d77f331993f8f926f1605}{removegreen}}();}
+\DoxyCodeLine{147                 printf(\textcolor{stringliteral}{"The green shade has been removed . To check pixel value enter x<953 and y<1268 \(\backslash\)n"});}
+\DoxyCodeLine{148                 scanf(\textcolor{stringliteral}{"\%d \%d"},\&x,\&y);}
+\DoxyCodeLine{149                 \mbox{\hyperlink{q3_8c_a66e93f3d6145d7f66fbad8faba1f6cec}{pixelValue}}(x,y);}
+\DoxyCodeLine{150                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{151         \textcolor{keywordflow}{case} 3:}
+\DoxyCodeLine{152                 \mbox{\hyperlink{q3_8c_aa7d479cc35251fa7a76844527855dd1e}{removeblue}}();}
+\DoxyCodeLine{153                 printf(\textcolor{stringliteral}{"The blue shade has been removed . To check pixel value enter x<953 and y<1268\(\backslash\)n"});}
+\DoxyCodeLine{154                 scanf(\textcolor{stringliteral}{"\%d \%d"},\&x,\&y);}
+\DoxyCodeLine{155                 \mbox{\hyperlink{q3_8c_a66e93f3d6145d7f66fbad8faba1f6cec}{pixelValue}}(x,y);}
+\DoxyCodeLine{156                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{157     \textcolor{keywordflow}{case} 4:}
+\DoxyCodeLine{158                 \mbox{\hyperlink{q3_8c_af9393dcdbcdf45db26c0379ab29cdfa9}{redOnly}}();}
+\DoxyCodeLine{159                 printf(\textcolor{stringliteral}{"The red shade has been preserved . To check pixel value enter x<953 and y<1268\(\backslash\)n"});}
+\DoxyCodeLine{160                 scanf(\textcolor{stringliteral}{"\%d \%d"},\&x,\&y);}
+\DoxyCodeLine{161                 \mbox{\hyperlink{q3_8c_a66e93f3d6145d7f66fbad8faba1f6cec}{pixelValue}}(x,y);}
+\DoxyCodeLine{162                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{163     \textcolor{keywordflow}{case} 5:}
+\DoxyCodeLine{164                 \mbox{\hyperlink{q3_8c_ab41f190053202d0dace818e7bf2b3baa}{blueOnly}}();}
+\DoxyCodeLine{165                 printf(\textcolor{stringliteral}{"The blue shade has been preserved . To check pixel value enter x<953 and y<1268\(\backslash\)n"});}
+\DoxyCodeLine{166                 scanf(\textcolor{stringliteral}{"\%d \%d"},\&x,\&y);}
+\DoxyCodeLine{167                 \mbox{\hyperlink{q3_8c_a66e93f3d6145d7f66fbad8faba1f6cec}{pixelValue}}(x,y);}
+\DoxyCodeLine{168                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{169     \textcolor{keywordflow}{case} 6:}
+\DoxyCodeLine{170                 \mbox{\hyperlink{q3_8c_ad1543fdc021f2c0b48bf978ca970b4c4}{greenOnly}}();}
+\DoxyCodeLine{171                 printf(\textcolor{stringliteral}{"The green shade has been preserved . To check pixel value enter x<953 and y<1268\(\backslash\)n"});}
+\DoxyCodeLine{172                 scanf(\textcolor{stringliteral}{"\%d \%d"},\&x,\&y);}
+\DoxyCodeLine{173                 \mbox{\hyperlink{q3_8c_a66e93f3d6145d7f66fbad8faba1f6cec}{pixelValue}}(x,y);}
+\DoxyCodeLine{174                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{175        \textcolor{keywordflow}{default}: printf(\textcolor{stringliteral}{"Wrong input selected\(\backslash\)n"});}
+\DoxyCodeLine{176        \}printf(\textcolor{stringliteral}{"\(\backslash\)n"});\}}
+\DoxyCodeLine{177    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{q3_8c_a66e93f3d6145d7f66fbad8faba1f6cec}\label{q3_8c_a66e93f3d6145d7f66fbad8faba1f6cec}} 
+\index{q3.c@{q3.c}!pixelValue@{pixelValue}}
+\index{pixelValue@{pixelValue}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{pixelValue()}{pixelValue()}}
+{\footnotesize\ttfamily void pixel\+Value (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+F\+Unction to get the pixel value at a given row and column from all the three colour matrices 
+
+Definition at line 15 of file q3.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16 \{}
+\DoxyCodeLine{17  printf(\textcolor{stringliteral}{"Red:\%d "},\mbox{\hyperlink{q3_8c_afbc02cfe334c856f935a9b88e06ff10c}{r}}[x][y]);}
+\DoxyCodeLine{18  }
+\DoxyCodeLine{19  printf(\textcolor{stringliteral}{"Green:\%d "},\mbox{\hyperlink{q3_8c_ab7058cc6e0cec6bdca362a11969375d0}{g}}[x][y]);}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21  printf(\textcolor{stringliteral}{"Blue:\%d "},\mbox{\hyperlink{q3_8c_ae64f53180b5d41e1fbe03fef85cf0b04}{b}}[x][y]);}
+\DoxyCodeLine{22 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{q3_8c_ad9bde1c31a74a9b5dc9ea3531dfc70d8}\label{q3_8c_ad9bde1c31a74a9b5dc9ea3531dfc70d8}} 
+\index{q3.c@{q3.c}!readfile@{readfile}}
+\index{readfile@{readfile}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{readfile()}{readfile()}}
+{\footnotesize\ttfamily int $\ast$$\ast$ readfile (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{f }\end{DoxyParamCaption})}
+
+
+
+used to find the no of columns in the file 
+
+It reads the given file using its ptr and fscanf Generally the delimiter is , but at the end of the line the delimiter has been made nextline to avoid any discrepancies 
+
+Definition at line 185 of file q3.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{186    \{    }
+\DoxyCodeLine{187     \textcolor{keywordflow}{if}(!f)}
+\DoxyCodeLine{188     \{printf(\textcolor{stringliteral}{"error in opening the file"});}
+\DoxyCodeLine{189          fclose(f);         }
+\DoxyCodeLine{190         \}}
+\DoxyCodeLine{191     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{192     \{}
+\DoxyCodeLine{193         \textcolor{keywordtype}{int} **arr=(\textcolor{keywordtype}{int} **)malloc(\mbox{\hyperlink{q3_8c_af1d3cff2e4538e23400e260bae3dadad}{row}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}*));}
+\DoxyCodeLine{194                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i= 0; i < \mbox{\hyperlink{q3_8c_af1d3cff2e4538e23400e260bae3dadad}{row}}; i++)}
+\DoxyCodeLine{195                   arr[i]=(\textcolor{keywordtype}{int}*)malloc(\mbox{\hyperlink{q3_8c_afb52e720f5f0c483db5861f9e42e924e}{col}}*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}*));}
+\DoxyCodeLine{196                   }
+\DoxyCodeLine{197                 \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\mbox{\hyperlink{q3_8c_af1d3cff2e4538e23400e260bae3dadad}{row}};i++)}
+\DoxyCodeLine{198                     \{}
+\DoxyCodeLine{199                     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<\mbox{\hyperlink{q3_8c_afb52e720f5f0c483db5861f9e42e924e}{col}};j++)}
+\DoxyCodeLine{200                       \{ \textcolor{keywordflow}{if}(j==\mbox{\hyperlink{q3_8c_afb52e720f5f0c483db5861f9e42e924e}{col}}-\/1) }
+\DoxyCodeLine{201             fscanf(f,\textcolor{stringliteral}{"\%d/n"} ,\&arr[i][j]);}
+\DoxyCodeLine{202                         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{203                          fscanf(f,\textcolor{stringliteral}{"\%d,"} ,\&arr[i][j]);}
+\DoxyCodeLine{204                    \}}
+\DoxyCodeLine{205                     \}}
+\DoxyCodeLine{206                fclose(f);}
+\DoxyCodeLine{207         \textcolor{keywordflow}{return}(arr);}
+\DoxyCodeLine{208        \}}
+\DoxyCodeLine{209    \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{q3_8c_af9393dcdbcdf45db26c0379ab29cdfa9}\label{q3_8c_af9393dcdbcdf45db26c0379ab29cdfa9}} 
+\index{q3.c@{q3.c}!redOnly@{redOnly}}
+\index{redOnly@{redOnly}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{redOnly()}{redOnly()}}
+{\footnotesize\ttfamily void red\+Only (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+It preserves the red colour by removing the green and the blue shades first green is removed then blue and again green has to be removed to make sure that no green was remaining after removing blue 
+
+Definition at line 84 of file q3.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{85 \{}
+\DoxyCodeLine{86    \mbox{\hyperlink{q3_8c_a962ddf53446d77f331993f8f926f1605}{removegreen}}();}
+\DoxyCodeLine{87    \mbox{\hyperlink{q3_8c_aa7d479cc35251fa7a76844527855dd1e}{removeblue}}();}
+\DoxyCodeLine{88    \mbox{\hyperlink{q3_8c_a962ddf53446d77f331993f8f926f1605}{removegreen}}();}
+\DoxyCodeLine{89 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{q3_8c_aa7d479cc35251fa7a76844527855dd1e}\label{q3_8c_aa7d479cc35251fa7a76844527855dd1e}} 
+\index{q3.c@{q3.c}!removeblue@{removeblue}}
+\index{removeblue@{removeblue}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{removeblue()}{removeblue()}}
+{\footnotesize\ttfamily void removeblue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A function to remove all the blue shades in given image A loop traverses through the 2d array and.. It compares the pixel value of the other two by acessing their arrays 
+
+Definition at line 69 of file q3.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{70 \{}
+\DoxyCodeLine{71     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\mbox{\hyperlink{q3_8c_af1d3cff2e4538e23400e260bae3dadad}{row}};i++)}
+\DoxyCodeLine{72   \{}
+\DoxyCodeLine{73     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<\mbox{\hyperlink{q3_8c_afb52e720f5f0c483db5861f9e42e924e}{col}};j++)}
+\DoxyCodeLine{74     \{}
+\DoxyCodeLine{75     \textcolor{keywordflow}{if}((\mbox{\hyperlink{q3_8c_ae64f53180b5d41e1fbe03fef85cf0b04}{b}}[i][j]>\mbox{\hyperlink{q3_8c_ab7058cc6e0cec6bdca362a11969375d0}{g}}[i][j])\&\&(\mbox{\hyperlink{q3_8c_ae64f53180b5d41e1fbe03fef85cf0b04}{b}}[i][j]>\mbox{\hyperlink{q3_8c_afbc02cfe334c856f935a9b88e06ff10c}{r}}[i][j]))}
+\DoxyCodeLine{76        \mbox{\hyperlink{q3_8c_ae64f53180b5d41e1fbe03fef85cf0b04}{b}}[i][j]=0;}
+\DoxyCodeLine{77      \}}
+\DoxyCodeLine{78   \} }
+\DoxyCodeLine{79 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{q3_8c_a962ddf53446d77f331993f8f926f1605}\label{q3_8c_a962ddf53446d77f331993f8f926f1605}} 
+\index{q3.c@{q3.c}!removegreen@{removegreen}}
+\index{removegreen@{removegreen}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{removegreen()}{removegreen()}}
+{\footnotesize\ttfamily void removegreen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A function to remove all the green shades in given image A loop traverses through the 2d array and.. It compares the pixel value of the other two by acessing their arrays 
+
+Definition at line 54 of file q3.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{55 \{}
+\DoxyCodeLine{56     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\mbox{\hyperlink{q3_8c_af1d3cff2e4538e23400e260bae3dadad}{row}};i++)}
+\DoxyCodeLine{57   \{}
+\DoxyCodeLine{58     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<\mbox{\hyperlink{q3_8c_afb52e720f5f0c483db5861f9e42e924e}{col}};j++)}
+\DoxyCodeLine{59     \{}
+\DoxyCodeLine{60     \textcolor{keywordflow}{if}((\mbox{\hyperlink{q3_8c_ab7058cc6e0cec6bdca362a11969375d0}{g}}[i][j]>\mbox{\hyperlink{q3_8c_afbc02cfe334c856f935a9b88e06ff10c}{r}}[i][j])\&\&(\mbox{\hyperlink{q3_8c_ab7058cc6e0cec6bdca362a11969375d0}{g}}[i][j]>\mbox{\hyperlink{q3_8c_ae64f53180b5d41e1fbe03fef85cf0b04}{b}}[i][j]))}
+\DoxyCodeLine{61        \mbox{\hyperlink{q3_8c_ab7058cc6e0cec6bdca362a11969375d0}{g}}[i][j]=0;}
+\DoxyCodeLine{62      \}}
+\DoxyCodeLine{63   \}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{65 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{q3_8c_a20e62c8b3afc6f174b695f8e5a402c9f}\label{q3_8c_a20e62c8b3afc6f174b695f8e5a402c9f}} 
+\index{q3.c@{q3.c}!removered@{removered}}
+\index{removered@{removered}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{removered()}{removered()}}
+{\footnotesize\ttfamily void removered (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+A function to remove all the red shades in given image A loop traverses through the 2d array and.. It compares the pixel value of the other two by acessing their arrays 
+
+Definition at line 40 of file q3.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{41 \{}
+\DoxyCodeLine{42   \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<\mbox{\hyperlink{q3_8c_af1d3cff2e4538e23400e260bae3dadad}{row}};i++)}
+\DoxyCodeLine{43   \{}
+\DoxyCodeLine{44     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=0;j<\mbox{\hyperlink{q3_8c_afb52e720f5f0c483db5861f9e42e924e}{col}};j++)}
+\DoxyCodeLine{45     \{}
+\DoxyCodeLine{46     \textcolor{keywordflow}{if}((\mbox{\hyperlink{q3_8c_afbc02cfe334c856f935a9b88e06ff10c}{r}}[i][j]>\mbox{\hyperlink{q3_8c_ab7058cc6e0cec6bdca362a11969375d0}{g}}[i][j])\&\&(\mbox{\hyperlink{q3_8c_afbc02cfe334c856f935a9b88e06ff10c}{r}}[i][j]>\mbox{\hyperlink{q3_8c_ae64f53180b5d41e1fbe03fef85cf0b04}{b}}[i][j]))}
+\DoxyCodeLine{47        \mbox{\hyperlink{q3_8c_afbc02cfe334c856f935a9b88e06ff10c}{r}}[i][j]=0;}
+\DoxyCodeLine{48      \}}
+\DoxyCodeLine{49   \} }
+\DoxyCodeLine{50 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{q3_8c_ae64f53180b5d41e1fbe03fef85cf0b04}\label{q3_8c_ae64f53180b5d41e1fbe03fef85cf0b04}} 
+\index{q3.c@{q3.c}!b@{b}}
+\index{b@{b}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{b}{b}}
+{\footnotesize\ttfamily int$\ast$$\ast$ b}
+
+
+
+A dynamic array stores the address of the array that stores the pixel value of green. 
+
+
+
+Definition at line 9 of file q3.\+c.
+
+\mbox{\Hypertarget{q3_8c_afb52e720f5f0c483db5861f9e42e924e}\label{q3_8c_afb52e720f5f0c483db5861f9e42e924e}} 
+\index{q3.c@{q3.c}!col@{col}}
+\index{col@{col}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{col}{col}}
+{\footnotesize\ttfamily int col}
+
+
+
+used to store the no of rows in the file 
+
+
+
+Definition at line 11 of file q3.\+c.
+
+\mbox{\Hypertarget{q3_8c_ab7058cc6e0cec6bdca362a11969375d0}\label{q3_8c_ab7058cc6e0cec6bdca362a11969375d0}} 
+\index{q3.c@{q3.c}!g@{g}}
+\index{g@{g}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{g}{g}}
+{\footnotesize\ttfamily int$\ast$$\ast$ g}
+
+
+
+A dynamic array stores the address of the array that stores the pixel value of red. 
+
+
+
+Definition at line 8 of file q3.\+c.
+
+\mbox{\Hypertarget{q3_8c_afbc02cfe334c856f935a9b88e06ff10c}\label{q3_8c_afbc02cfe334c856f935a9b88e06ff10c}} 
+\index{q3.c@{q3.c}!r@{r}}
+\index{r@{r}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{r}{r}}
+{\footnotesize\ttfamily int$\ast$$\ast$ r}
+
+
+
+Definition at line 7 of file q3.\+c.
+
+\mbox{\Hypertarget{q3_8c_af1d3cff2e4538e23400e260bae3dadad}\label{q3_8c_af1d3cff2e4538e23400e260bae3dadad}} 
+\index{q3.c@{q3.c}!row@{row}}
+\index{row@{row}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{row}{row}}
+{\footnotesize\ttfamily int row}
+
+
+
+A dynamic array stores the address of the array that stores the pixel value of blue. 
+
+
+
+Definition at line 10 of file q3.\+c.
+
+\mbox{\Hypertarget{q3_8c_a339d22b3e442946380f98ed19e320db2}\label{q3_8c_a339d22b3e442946380f98ed19e320db2}} 
+\index{q3.c@{q3.c}!s@{s}}
+\index{s@{s}!q3.c@{q3.c}}
+\doxysubsubsection{\texorpdfstring{s}{s}}
+{\footnotesize\ttfamily int s}
+
+
+
+used to store the no of columns in the file 
+
+
+
+Definition at line 12 of file q3.\+c.
+

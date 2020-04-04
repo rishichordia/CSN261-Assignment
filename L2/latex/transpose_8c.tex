@@ -1,0 +1,282 @@
+\hypertarget{transpose_8c}{}\doxysection{transpose.\+c File Reference}
+\label{transpose_8c}\index{transpose.c@{transpose.c}}
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \mbox{\hyperlink{transpose_8c_a0d0c3a181647e71f3412965df933db9a}{readinput}} ()
+\begin{DoxyCompactList}\small\item\em A function to take and check for correct integral. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{transpose_8c_a48aeab2c4168ff13f0ecf9cdb07adfe5}{encrypt\+\_\+read}} (int n)
+\begin{DoxyCompactList}\small\item\em A function to read data or text from file. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{transpose_8c_aed193cb869924b7251b52c0696617963}{encrypt}} (int x, int n, int aa, int b)
+\item 
+void \mbox{\hyperlink{transpose_8c_a7437b254e19e7e12fc2ec99945f4ecea}{output}} ()
+\begin{DoxyCompactList}\small\item\em A function to display the encrypted output for checking. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{transpose_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+int $\ast$ \mbox{\hyperlink{transpose_8c_ab561f3b42e49eecbec26c4266a6deaea}{a}}
+\item 
+char \mbox{\hyperlink{transpose_8c_a8c1e45e135261042ac6429a00328fe61}{filename}} \mbox{[}100\mbox{]} =\char`\"{}\char`\"{}
+\item 
+char \mbox{\hyperlink{transpose_8c_ae372b999e305792728c6f4e4a5ee995a}{stri}} \mbox{[}$\,$\mbox{]} =\char`\"{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em stores the current string \end{DoxyCompactList}\item 
+char \mbox{\hyperlink{transpose_8c_a4913292f50f9a3032f1fb99a0a2ad7ac}{encrypted}} \mbox{[}$\,$\mbox{]} =\char`\"{}\char`\"{}
+\begin{DoxyCompactList}\small\item\em stores the encrypted version \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{transpose_8c_aed193cb869924b7251b52c0696617963}\label{transpose_8c_aed193cb869924b7251b52c0696617963}} 
+\index{transpose.c@{transpose.c}!encrypt@{encrypt}}
+\index{encrypt@{encrypt}!transpose.c@{transpose.c}}
+\doxysubsubsection{\texorpdfstring{encrypt()}{encrypt()}}
+{\footnotesize\ttfamily void encrypt (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{n,  }\item[{int}]{aa,  }\item[{int}]{b }\end{DoxyParamCaption})}
+
+This function encrypts the output following all the rules of the question 
+
+Definition at line 90 of file transpose.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{91 \{}
+\DoxyCodeLine{92     }
+\DoxyCodeLine{93         \textcolor{keywordtype}{char} str[x];strcpy(str,\mbox{\hyperlink{transpose_8c_ae372b999e305792728c6f4e4a5ee995a}{stri}});}
+\DoxyCodeLine{94     \textcolor{keywordtype}{int} size=x/n;}
+\DoxyCodeLine{95     \textcolor{keywordtype}{int} count=0;}
+\DoxyCodeLine{96         \textcolor{keywordflow}{while}(count<size)}
+\DoxyCodeLine{97     \{}
+\DoxyCodeLine{98            \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} i=0;i<n;i++)}
+\DoxyCodeLine{99         \{}
+\DoxyCodeLine{100                         \textcolor{keywordtype}{int} k=((aa*i)+b)\%n;}
+\DoxyCodeLine{101                         \textcolor{keywordflow}{if}(k<0)}
+\DoxyCodeLine{102             k=k+n;}
+\DoxyCodeLine{103                         \textcolor{keywordtype}{int} q=k+count*n;}
+\DoxyCodeLine{104                         \textcolor{keywordtype}{char} c=str[q];}
+\DoxyCodeLine{105                         \textcolor{keywordflow}{if}(c==\textcolor{charliteral}{'\(\backslash\)0'})}
+\DoxyCodeLine{106                         \mbox{\hyperlink{transpose_8c_a4913292f50f9a3032f1fb99a0a2ad7ac}{encrypted}}[i+count*n]=\textcolor{charliteral}{'\(\backslash\)t'};}
+\DoxyCodeLine{107                         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{108             \mbox{\hyperlink{transpose_8c_a4913292f50f9a3032f1fb99a0a2ad7ac}{encrypted}}[i+count*n]=c;                        }
+\DoxyCodeLine{109                  \}}
+\DoxyCodeLine{110         count++;}
+\DoxyCodeLine{111     \}}
+\DoxyCodeLine{112       \mbox{\hyperlink{transpose_8c_a4913292f50f9a3032f1fb99a0a2ad7ac}{encrypted}}[x]=\textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{114    printf(\textcolor{stringliteral}{"\%s\(\backslash\)n"},\mbox{\hyperlink{transpose_8c_a4913292f50f9a3032f1fb99a0a2ad7ac}{encrypted}});      }
+\DoxyCodeLine{115 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{transpose_8c_a48aeab2c4168ff13f0ecf9cdb07adfe5}\label{transpose_8c_a48aeab2c4168ff13f0ecf9cdb07adfe5}} 
+\index{transpose.c@{transpose.c}!encrypt\_read@{encrypt\_read}}
+\index{encrypt\_read@{encrypt\_read}!transpose.c@{transpose.c}}
+\doxysubsubsection{\texorpdfstring{encrypt\_read()}{encrypt\_read()}}
+{\footnotesize\ttfamily int encrypt\+\_\+read (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+A function to read data or text from file. 
+
+
+
+Definition at line 55 of file transpose.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{56 \{}
+\DoxyCodeLine{57         FILE* f =fopen(\textcolor{stringliteral}{"Sample\_testcase\_1.txt"},\textcolor{stringliteral}{"r"});}
+\DoxyCodeLine{58         }
+\DoxyCodeLine{59     \textcolor{keywordflow}{if}(!f)}
+\DoxyCodeLine{60     \{printf(\textcolor{stringliteral}{"Cannot open file"});}
+\DoxyCodeLine{61         \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{62     \}}
+\DoxyCodeLine{63     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{64     \{}
+\DoxyCodeLine{65         \textcolor{keywordtype}{int} x=0;}
+\DoxyCodeLine{66           \textcolor{keywordtype}{char} ch;}
+\DoxyCodeLine{67           \textcolor{keywordflow}{while}((ch=getc(f))!=EOF)}
+\DoxyCodeLine{68           \{}
+\DoxyCodeLine{69           \textcolor{keywordflow}{if}(ch==\textcolor{charliteral}{'\(\backslash\)r'})}
+\DoxyCodeLine{70           \textcolor{keywordflow}{continue};}
+\DoxyCodeLine{71           \mbox{\hyperlink{transpose_8c_ae372b999e305792728c6f4e4a5ee995a}{stri}}[x]=ch;}
+\DoxyCodeLine{72           x++;}
+\DoxyCodeLine{73           \}}
+\DoxyCodeLine{74                 \mbox{\hyperlink{transpose_8c_ae372b999e305792728c6f4e4a5ee995a}{stri}}[x]=\textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{75                 \textcolor{keywordflow}{while}((x\%n)!=0)}
+\DoxyCodeLine{76             \{}
+\DoxyCodeLine{77         strcat(\mbox{\hyperlink{transpose_8c_ae372b999e305792728c6f4e4a5ee995a}{stri}},\textcolor{stringliteral}{"\(\backslash\)0"});}
+\DoxyCodeLine{78         x++;}
+\DoxyCodeLine{79             \}}
+\DoxyCodeLine{80                 fclose(f);}
+\DoxyCodeLine{81         printf(\textcolor{stringliteral}{"\%s \%d\(\backslash\)n"},\mbox{\hyperlink{transpose_8c_ae372b999e305792728c6f4e4a5ee995a}{stri}},x);}
+\DoxyCodeLine{82         \textcolor{keywordflow}{return} x;}
+\DoxyCodeLine{83     \}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{transpose_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}\label{transpose_8c_ae66f6b31b5ad750f1fe042a706a4e3d4}} 
+\index{transpose.c@{transpose.c}!main@{main}}
+\index{main@{main}!transpose.c@{transpose.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 129 of file transpose.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{130 \{}
+\DoxyCodeLine{131         \textcolor{keywordtype}{int} *b=(\textcolor{keywordtype}{int} *)malloc(3*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));}
+\DoxyCodeLine{132         b=\mbox{\hyperlink{transpose_8c_a0d0c3a181647e71f3412965df933db9a}{readinput}}();}
+\DoxyCodeLine{133         \textcolor{comment}{//printf("\%d \%d \%d ",b[0],b[1],b[2]);}}
+\DoxyCodeLine{134         \textcolor{keywordtype}{int} c=\mbox{\hyperlink{transpose_8c_a48aeab2c4168ff13f0ecf9cdb07adfe5}{encrypt\_read}}(b[0]);}
+\DoxyCodeLine{135         \textcolor{comment}{//printf("\%d\(\backslash\)n",c);}}
+\DoxyCodeLine{136     \mbox{\hyperlink{transpose_8c_aed193cb869924b7251b52c0696617963}{encrypt}}(c,b[0],b[1],b[2]);}
+\DoxyCodeLine{137         \textcolor{comment}{//printf("\%s\(\backslash\)n",encrypted);}}
+\DoxyCodeLine{138         \mbox{\hyperlink{transpose_8c_a7437b254e19e7e12fc2ec99945f4ecea}{output}}();}
+\DoxyCodeLine{139         \textcolor{comment}{//printf("\%d \%d \%d ",b[0],b[1],b[2]);}}
+\DoxyCodeLine{140 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{transpose_8c_a7437b254e19e7e12fc2ec99945f4ecea}\label{transpose_8c_a7437b254e19e7e12fc2ec99945f4ecea}} 
+\index{transpose.c@{transpose.c}!output@{output}}
+\index{output@{output}!transpose.c@{transpose.c}}
+\doxysubsubsection{\texorpdfstring{output()}{output()}}
+{\footnotesize\ttfamily void output (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A function to display the encrypted output for checking. 
+
+
+
+Definition at line 118 of file transpose.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{119 \{}
+\DoxyCodeLine{120 FILE *f=fopen(\textcolor{stringliteral}{"outputfile.txt"},\textcolor{stringliteral}{"w"});}
+\DoxyCodeLine{121 \textcolor{keywordflow}{if}(!f)}
+\DoxyCodeLine{122 printf(\textcolor{stringliteral}{"error"});}
+\DoxyCodeLine{123 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{124 \{fprintf(f,\textcolor{stringliteral}{"\%s"},\mbox{\hyperlink{transpose_8c_a4913292f50f9a3032f1fb99a0a2ad7ac}{encrypted}});}
+\DoxyCodeLine{125 \}}
+\DoxyCodeLine{126 fclose(f);}
+\DoxyCodeLine{127 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{transpose_8c_a0d0c3a181647e71f3412965df933db9a}\label{transpose_8c_a0d0c3a181647e71f3412965df933db9a}} 
+\index{transpose.c@{transpose.c}!readinput@{readinput}}
+\index{readinput@{readinput}!transpose.c@{transpose.c}}
+\doxysubsubsection{\texorpdfstring{readinput()}{readinput()}}
+{\footnotesize\ttfamily int$\ast$ readinput (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+A function to take and check for correct integral. 
+
+
+
+Definition at line 11 of file transpose.\+c.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{12 \{   }
+\DoxyCodeLine{13         \mbox{\hyperlink{transpose_8c_ab561f3b42e49eecbec26c4266a6deaea}{a}}=(\textcolor{keywordtype}{int}*)malloc(3*\textcolor{keyword}{sizeof}(\textcolor{keywordtype}{int}));        }
+\DoxyCodeLine{14     \textcolor{keywordtype}{char} inp[500];fgets(inp,500,stdin);}
+\DoxyCodeLine{15     \textcolor{keywordtype}{char} *token = strtok(inp,\textcolor{stringliteral}{" "});}
+\DoxyCodeLine{16     \textcolor{keywordflow}{if}(!token)}
+\DoxyCodeLine{17     \{}
+\DoxyCodeLine{18         printf(\textcolor{stringliteral}{"Wrong input"});}
+\DoxyCodeLine{19         exit(0);}
+\DoxyCodeLine{20     \}}
+\DoxyCodeLine{21     \mbox{\hyperlink{transpose_8c_ab561f3b42e49eecbec26c4266a6deaea}{a}}[0]=atoi(token);}
+\DoxyCodeLine{22     token=strtok(NULL,\textcolor{stringliteral}{" "});}
+\DoxyCodeLine{23     \textcolor{keywordflow}{if}(!token)}
+\DoxyCodeLine{24     \{}
+\DoxyCodeLine{25         printf(\textcolor{stringliteral}{"Wrong input"});}
+\DoxyCodeLine{26         exit(0);}
+\DoxyCodeLine{27     \}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29     \mbox{\hyperlink{transpose_8c_ab561f3b42e49eecbec26c4266a6deaea}{a}}[1]=atoi(token);}
+\DoxyCodeLine{30     token=strtok(NULL,\textcolor{stringliteral}{" "});}
+\DoxyCodeLine{31     \textcolor{keywordflow}{if}(!token)}
+\DoxyCodeLine{32     \{}
+\DoxyCodeLine{33         printf(\textcolor{stringliteral}{"Wrong input"});}
+\DoxyCodeLine{34         exit(0);}
+\DoxyCodeLine{35     \}}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37     \mbox{\hyperlink{transpose_8c_ab561f3b42e49eecbec26c4266a6deaea}{a}}[2]=atoi(token);}
+\DoxyCodeLine{38     token=strtok(NULL,\textcolor{stringliteral}{" "});}
+\DoxyCodeLine{39     \textcolor{keywordflow}{if}(!token)}
+\DoxyCodeLine{40     \{}
+\DoxyCodeLine{41         printf(\textcolor{stringliteral}{"Wrong input"});}
+\DoxyCodeLine{42         exit(0);}
+\DoxyCodeLine{43     \}}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{45     strcpy(\mbox{\hyperlink{transpose_8c_a8c1e45e135261042ac6429a00328fe61}{filename}},token);}
+\DoxyCodeLine{46     token=strtok(NULL,\textcolor{stringliteral}{" "});}
+\DoxyCodeLine{47     \textcolor{keywordflow}{if}(token)}
+\DoxyCodeLine{48     \{}
+\DoxyCodeLine{49         printf(\textcolor{stringliteral}{"Wrong input"});}
+\DoxyCodeLine{50         exit(0);}
+\DoxyCodeLine{51     \}}
+\DoxyCodeLine{52     \textcolor{keywordflow}{return} \mbox{\hyperlink{transpose_8c_ab561f3b42e49eecbec26c4266a6deaea}{a}};}
+\DoxyCodeLine{53  \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{transpose_8c_ab561f3b42e49eecbec26c4266a6deaea}\label{transpose_8c_ab561f3b42e49eecbec26c4266a6deaea}} 
+\index{transpose.c@{transpose.c}!a@{a}}
+\index{a@{a}!transpose.c@{transpose.c}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily int$\ast$ a}
+
+
+
+Definition at line 4 of file transpose.\+c.
+
+\mbox{\Hypertarget{transpose_8c_a4913292f50f9a3032f1fb99a0a2ad7ac}\label{transpose_8c_a4913292f50f9a3032f1fb99a0a2ad7ac}} 
+\index{transpose.c@{transpose.c}!encrypted@{encrypted}}
+\index{encrypted@{encrypted}!transpose.c@{transpose.c}}
+\doxysubsubsection{\texorpdfstring{encrypted}{encrypted}}
+{\footnotesize\ttfamily char encrypted\mbox{[}$\,$\mbox{]} =\char`\"{}\char`\"{}}
+
+
+
+stores the encrypted version 
+
+
+
+Definition at line 9 of file transpose.\+c.
+
+\mbox{\Hypertarget{transpose_8c_a8c1e45e135261042ac6429a00328fe61}\label{transpose_8c_a8c1e45e135261042ac6429a00328fe61}} 
+\index{transpose.c@{transpose.c}!filename@{filename}}
+\index{filename@{filename}!transpose.c@{transpose.c}}
+\doxysubsubsection{\texorpdfstring{filename}{filename}}
+{\footnotesize\ttfamily char filename\mbox{[}100\mbox{]} =\char`\"{}\char`\"{}}
+
+
+
+Definition at line 5 of file transpose.\+c.
+
+\mbox{\Hypertarget{transpose_8c_ae372b999e305792728c6f4e4a5ee995a}\label{transpose_8c_ae372b999e305792728c6f4e4a5ee995a}} 
+\index{transpose.c@{transpose.c}!stri@{stri}}
+\index{stri@{stri}!transpose.c@{transpose.c}}
+\doxysubsubsection{\texorpdfstring{stri}{stri}}
+{\footnotesize\ttfamily char stri\mbox{[}$\,$\mbox{]} =\char`\"{}\char`\"{}}
+
+
+
+stores the current string 
+
+
+
+Definition at line 7 of file transpose.\+c.
+

@@ -1,0 +1,113 @@
+\hypertarget{classLList}{}\doxysection{L\+List Class Reference}
+\label{classLList}\index{LList@{LList}}
+
+
+A class which defines the operations on the linked list.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classLList_a677cea778753c98132827a6266ce622a}{L\+List}} ()
+\item 
+void \mbox{\hyperlink{classLList_ad2a2b186ecbe62b4c8864c12625e2cf5}{insert}} (int d)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classnode}{node}} $\ast$ \mbox{\hyperlink{classLList_ab460046756d5eb360433b4990b42651d}{head}}
+\item 
+int \mbox{\hyperlink{classLList_aa5c863a1c80888944b6ea6556939d2ed}{size}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+A class which defines the operations on the linked list. 
+
+Definition at line 12 of file Q2.\+cpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classLList_a677cea778753c98132827a6266ce622a}\label{classLList_a677cea778753c98132827a6266ce622a}} 
+\index{LList@{LList}!LList@{LList}}
+\index{LList@{LList}!LList@{LList}}
+\doxysubsubsection{\texorpdfstring{LList()}{LList()}}
+{\footnotesize\ttfamily L\+List\+::\+L\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 15 of file Q2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{16         \{}
+\DoxyCodeLine{17             \mbox{\hyperlink{classLList_ab460046756d5eb360433b4990b42651d}{head}}=NULL;}
+\DoxyCodeLine{18         \}    }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classLList_ad2a2b186ecbe62b4c8864c12625e2cf5}\label{classLList_ad2a2b186ecbe62b4c8864c12625e2cf5}} 
+\index{LList@{LList}!insert@{insert}}
+\index{insert@{insert}!LList@{LList}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily void L\+List\+::insert (\begin{DoxyParamCaption}\item[{int}]{d }\end{DoxyParamCaption})}
+
+A function that inserts a node at the end of a linked list 
+\begin{DoxyParams}{Parameters}
+{\em d} & data to be inputted in the linked list \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 25 of file Q2.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{26 \{}
+\DoxyCodeLine{27     \mbox{\hyperlink{classnode}{node}}* temp=(\mbox{\hyperlink{classnode}{node}}*)malloc(\textcolor{keyword}{sizeof}(\mbox{\hyperlink{classnode}{node}}));}
+\DoxyCodeLine{28     temp-\/>\mbox{\hyperlink{classnode_a2d890bb9f6af0ffd73fe79b21124c2a2}{data}}=d;}
+\DoxyCodeLine{29     temp-\/>\mbox{\hyperlink{classnode_aad210fa7c160a49f6b9a3ffee592a2bc}{next}}=NULL;}
+\DoxyCodeLine{30     \textcolor{keywordflow}{if}(\mbox{\hyperlink{classLList_ab460046756d5eb360433b4990b42651d}{head}}==NULL)}
+\DoxyCodeLine{31         \mbox{\hyperlink{classLList_ab460046756d5eb360433b4990b42651d}{head}}=temp;}
+\DoxyCodeLine{32     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{33     \{}
+\DoxyCodeLine{34         \mbox{\hyperlink{classnode}{node}}* current=\mbox{\hyperlink{classLList_ab460046756d5eb360433b4990b42651d}{head}};}
+\DoxyCodeLine{35         \textcolor{keywordflow}{while}(current-\/>\mbox{\hyperlink{classnode_aad210fa7c160a49f6b9a3ffee592a2bc}{next}}!=NULL)}
+\DoxyCodeLine{36             current=current-\/>\mbox{\hyperlink{classnode_aad210fa7c160a49f6b9a3ffee592a2bc}{next}};}
+\DoxyCodeLine{37         current-\/>\mbox{\hyperlink{classnode_aad210fa7c160a49f6b9a3ffee592a2bc}{next}}=temp;}
+\DoxyCodeLine{38     \}}
+\DoxyCodeLine{39     \mbox{\hyperlink{classLList_aa5c863a1c80888944b6ea6556939d2ed}{size}}++; }
+\DoxyCodeLine{40 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classLList_ab460046756d5eb360433b4990b42651d}\label{classLList_ab460046756d5eb360433b4990b42651d}} 
+\index{LList@{LList}!head@{head}}
+\index{head@{head}!LList@{LList}}
+\doxysubsubsection{\texorpdfstring{head}{head}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classnode}{node}}$\ast$ L\+List\+::head}
+
+
+
+Definition at line 20 of file Q2.\+cpp.
+
+\mbox{\Hypertarget{classLList_aa5c863a1c80888944b6ea6556939d2ed}\label{classLList_aa5c863a1c80888944b6ea6556939d2ed}} 
+\index{LList@{LList}!size@{size}}
+\index{size@{size}!LList@{LList}}
+\doxysubsubsection{\texorpdfstring{size}{size}}
+{\footnotesize\ttfamily int L\+List\+::size}
+
+
+
+Definition at line 21 of file Q2.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Q2_8cpp}{Q2.\+cpp}}\end{DoxyCompactItemize}

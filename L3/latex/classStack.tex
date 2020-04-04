@@ -1,0 +1,151 @@
+\hypertarget{classStack}{}\doxysection{Stack Class Reference}
+\label{classStack}\index{Stack@{Stack}}
+
+
+\mbox{\hyperlink{classStack}{Stack}} are needed while displaying the paths as we use the Depth First Search Algorithm.  
+
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classStack_a14cd1cba325bead4ff0a91bc6eb0f6f5}{Stack}} ()
+\item 
+void \mbox{\hyperlink{classStack_afbe7194689ec0e63b2ab3243db2ff08f}{push}} (int x)
+\begin{DoxyCompactList}\small\item\em Pushes x into the stack. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStack_a09e820f3c3531cf3f401af3b3ca5d56f}{pop}} ()
+\begin{DoxyCompactList}\small\item\em pops from the stack \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classStack_ab43a28e30d1acd38e88d8e799d309e79}{print\+From\+Stack}} ()
+\begin{DoxyCompactList}\small\item\em Prints the elements in the required form. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{classStack_aff3aa58a7ead49e33cc1319528a088ee}{a}} \mbox{[}20\mbox{]}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\mbox{\hyperlink{classStack}{Stack}} are needed while displaying the paths as we use the Depth First Search Algorithm. 
+
+Definition at line 365 of file Q1.\+cpp.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classStack_a14cd1cba325bead4ff0a91bc6eb0f6f5}\label{classStack_a14cd1cba325bead4ff0a91bc6eb0f6f5}} 
+\index{Stack@{Stack}!Stack@{Stack}}
+\index{Stack@{Stack}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{Stack()}{Stack()}}
+{\footnotesize\ttfamily Stack\+::\+Stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Definition at line 371 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{371 \{ top = -\/1; \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classStack_a09e820f3c3531cf3f401af3b3ca5d56f}\label{classStack_a09e820f3c3531cf3f401af3b3ca5d56f}} 
+\index{Stack@{Stack}!pop@{pop}}
+\index{pop@{pop}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{pop()}{pop()}}
+{\footnotesize\ttfamily void Stack\+::pop (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+pops from the stack 
+
+
+
+Definition at line 383 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{384     \{ }
+\DoxyCodeLine{385         \textcolor{keywordflow}{if} (top < 0) \{ }
+\DoxyCodeLine{386             cout << \textcolor{stringliteral}{"Stack Underflow"}; }
+\DoxyCodeLine{387         \} }
+\DoxyCodeLine{388         \textcolor{keywordflow}{else} \{ }
+\DoxyCodeLine{389             \textcolor{keywordtype}{int} x = \mbox{\hyperlink{classStack_aff3aa58a7ead49e33cc1319528a088ee}{a}}[top-\/-\/]; }
+\DoxyCodeLine{390         \} }
+\DoxyCodeLine{391     \}  }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStack_ab43a28e30d1acd38e88d8e799d309e79}\label{classStack_ab43a28e30d1acd38e88d8e799d309e79}} 
+\index{Stack@{Stack}!printFromStack@{printFromStack}}
+\index{printFromStack@{printFromStack}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{printFromStack()}{printFromStack()}}
+{\footnotesize\ttfamily void Stack\+::print\+From\+Stack (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prints the elements in the required form. 
+
+
+
+Definition at line 393 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{394     \{}
+\DoxyCodeLine{395         \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} \mbox{\hyperlink{Q1_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}=0;\mbox{\hyperlink{Q1_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}<=top;\mbox{\hyperlink{Q1_8cpp_acb559820d9ca11295b4500f179ef6392}{i}}++)}
+\DoxyCodeLine{396         \{}
+\DoxyCodeLine{397             \textcolor{keywordflow}{for}(\textcolor{keywordtype}{int} j=\mbox{\hyperlink{Q1_8cpp_acb559820d9ca11295b4500f179ef6392}{i}};j<=top;j++)}
+\DoxyCodeLine{398             \{\textcolor{keywordflow}{if}(j!=top)}
+\DoxyCodeLine{399                 cout<<\mbox{\hyperlink{classStack_aff3aa58a7ead49e33cc1319528a088ee}{a}}[j]<<\textcolor{stringliteral}{"-\/>"};}
+\DoxyCodeLine{400                 \textcolor{keywordflow}{else}}
+\DoxyCodeLine{401                     cout<<\mbox{\hyperlink{classStack_aff3aa58a7ead49e33cc1319528a088ee}{a}}[j];}
+\DoxyCodeLine{402             \}}
+\DoxyCodeLine{403             cout<<\textcolor{stringliteral}{"\(\backslash\)n"};}
+\DoxyCodeLine{404         \}}
+\DoxyCodeLine{405     \} }
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classStack_afbe7194689ec0e63b2ab3243db2ff08f}\label{classStack_afbe7194689ec0e63b2ab3243db2ff08f}} 
+\index{Stack@{Stack}!push@{push}}
+\index{push@{push}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{push()}{push()}}
+{\footnotesize\ttfamily void Stack\+::push (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pushes x into the stack. 
+
+
+
+Definition at line 373 of file Q1.\+cpp.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{374     \{ }
+\DoxyCodeLine{375         \textcolor{keywordflow}{if} (top >= (20 -\/ 1)) \{ }
+\DoxyCodeLine{376             cout << \textcolor{stringliteral}{"Stack Overflow"}; }
+\DoxyCodeLine{377         \} }
+\DoxyCodeLine{378         \textcolor{keywordflow}{else} \{ }
+\DoxyCodeLine{379             \mbox{\hyperlink{classStack_aff3aa58a7ead49e33cc1319528a088ee}{a}}[++top] = x;  }
+\DoxyCodeLine{380         \} }
+\DoxyCodeLine{381     \} }
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classStack_aff3aa58a7ead49e33cc1319528a088ee}\label{classStack_aff3aa58a7ead49e33cc1319528a088ee}} 
+\index{Stack@{Stack}!a@{a}}
+\index{a@{a}!Stack@{Stack}}
+\doxysubsubsection{\texorpdfstring{a}{a}}
+{\footnotesize\ttfamily int Stack\+::a\mbox{[}20\mbox{]}}
+
+
+
+Definition at line 369 of file Q1.\+cpp.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{Q1_8cpp}{Q1.\+cpp}}\end{DoxyCompactItemize}
